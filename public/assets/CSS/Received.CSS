@@ -1,0 +1,445 @@
+/*nav*/
+
+#div1{
+
+    width: 1519px;
+    height: 65px;
+    background-color: #FFE3E3;
+    display: flex;
+    box-shadow: 0px 3px 10px -7px rgb(0, 0, 0);
+
+}
+
+#ph1{
+
+    height: 62px;
+    width: 130px;
+    margin: 3px 0 0 0;
+
+}
+
+#home{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 360px;
+}
+
+#cate{
+
+    color: white;
+    border: none;
+    font-size: 20px;
+    background: none;
+    font-family: Kadwa;
+    margin: 9px 0 0 85px;
+}
+
+#own{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#shop{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#cont{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#ph100{
+
+    width: 33px;
+    height: 30px;
+    margin: 17px 0 0 120px;
+
+
+}
+
+#ph46{
+    
+    width: 35px;
+    height:35px;
+    margin: 14px 0 0 47px;
+}
+
+#ph47{
+
+    width: 14px;
+    height: 14px;
+    margin: 37px 0 0 -9px;
+    
+}
+
+#car{
+    font-family: sans-serif;
+}
+#car:hover{
+    background-color: #FFE3E3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body 1 */
+
+
+#thank{
+
+    text-align: center;
+    color: #DB8383;
+    font-size: 20px;
+    margin: 70px 0 0 0;
+}
+
+
+#div2{
+
+    height: 138px;
+    width: 700px;
+    background: none;
+    border: 2px solid #afafaf;
+    margin: 45px 0 0 427px;
+    border-radius: 5px;
+
+}
+
+#div3{
+    display: flex;
+    margin: 20px 0 0 0;
+}
+
+#date{
+    font-size: 25px;
+    margin: 0 0 0 75px;
+}
+
+#total{
+    font-size: 25px;
+    margin: 0 0 0 178px;
+
+}
+
+#pay{
+    font-size: 25px;
+    margin: 0 0 0 95px;
+}
+
+#div4{
+    display: flex;
+    margin: 15px 0 0 0;
+}
+
+
+#mar{
+    font-size: 20px;
+    margin: 0 0 0 38px;
+}
+
+#l3{
+    font-size: 20px;
+    margin: 10px 0 0 142px;
+    font-family: kadwa;
+}
+
+#cash{
+    font-size: 20px;
+    margin: 0 0 0 119px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body 2 */
+
+
+
+#order{
+
+    color: black;
+    text-align: center;
+    margin: 90px 0 0 0;
+
+}
+
+
+#div5{
+
+    height: 141px;
+    width: 700px;
+    background: none;
+    border: 2px solid #afafaf;
+    margin: 45px 0 0 427px;
+    border-radius: 5px;
+
+}
+
+
+#div6{
+
+    display: flex;
+
+}
+
+
+#pro{
+
+    font-size: 22px;
+    margin: 25px 0 0 75px;
+
+}
+
+#x2{
+
+    font-size: 20px;
+    margin: 28px 0 0 5px;
+    color: #b1b1b1;
+    font-family: kadwa;
+
+}
+
+#le1{
+
+    font-family: kadwa;
+    font-size: 23px;
+    margin: -26px 0 0 563px;
+}
+
+
+#name1{
+
+    font-size: 22px;
+    margin: 15px 0 0 75px;
+}
+
+
+#x1{
+
+    font-size: 20px;
+    margin: 18px 0 0 5px;
+    color: #b1b1b1;
+    font-family: kadwa;
+
+}
+
+
+#le2{
+
+    font-family: kadwa;
+    font-size: 23px;
+    margin: -28px 0 0 563px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+
+#div25{
+    background-color: #F9F7F6;
+    width: 1519px;
+    height: 370px;
+    margin: 40px 0 0 0;
+}
+
+#ph25{
+    height: 120px;
+    width: 216px;
+    margin: 30px 0 0 10px;
+}
+
+
+#div26{
+    font-size: 25px;
+    margin: -45px 0 0 450px;
+    font-family: lnica;
+    color: black;
+}
+
+#z1{
+
+    color: black;
+}
+
+#div27{
+    font-size: 25px;
+    margin: -151px 0 0 700px;
+    font-family: lnica;
+    color: black;
+}
+
+
+#z2{
+
+    color: black;
+}
+
+#social{
+    font-size: 25px;
+    font-family: lnica;
+    margin: -112px 0 0 1110px;
+}
+
+
+#div28{
+    display: flex;
+    margin: 25px 0 0 1071px ;
+}
+
+#ph26{
+    height: 30px ;
+    width: 30px ;
+    margin: 0 0 0 15px;
+}
+
+
+
+
+
+
+
+

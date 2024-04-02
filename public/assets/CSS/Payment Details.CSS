@@ -1,0 +1,20 @@
+#trend{
+
+    color: #B80606;
+    text-align: center;
+    font-size: 90px;
+    margin: 210px 0 0 0;
+}
+
+#vd{
+
+    color: white;
+    background-color: #DB8383;
+    height: 35px;
+    width: 80px;
+    border: none;
+    box-shadow: 0px 4px 10px -8px rgb(0, 0, 0);
+    BORDER-RADIUS: 59px;
+    margin: 130px 0 0 700px;
+
+}

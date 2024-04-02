@@ -1,0 +1,426 @@
+/*nav*/
+
+#div1{
+
+    width: 1519px;
+    height: 65px;
+    background-color: #FFE3E3;
+    display: flex;
+    box-shadow: 0px 3px 10px -7px rgb(0, 0, 0);
+
+}
+
+#ph1{
+
+    height: 62px;
+    width: 130px;
+    margin: 3px 0 0 0;
+
+}
+
+#home{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 360px;
+}
+
+#cate{
+
+    color: white;
+    border: none;
+    font-size: 20px;
+    background: none;
+    font-family: Kadwa;
+    margin: 9px 0 0 85px;
+}
+
+#own{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#shop{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#cont{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#ph100{
+
+    width: 33px;
+    height: 30px;
+    margin: 17px 0 0 120px;
+
+
+}
+
+#ph46{
+    
+    width: 35px;
+    height:35px;
+    margin: 14px 0 0 47px;
+}
+
+#ph47{
+
+    width: 14px;
+    height: 14px;
+    margin: 37px 0 0 -9px;
+    
+}
+
+#car{
+    font-family: sans-serif;
+}
+#car:hover{
+    background-color: #FFE3E3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body 1 */
+
+
+#ph2{
+
+    height: 370px;
+    width: 330px;
+    margin: 80px 0 0 80px;
+
+}
+
+#ph3{
+
+    margin: -201px 0 0 280px;
+    width: 270px;
+    height: 111px;
+
+}
+
+#style{
+
+    font-family: kadwa;
+    color: #B80606;
+    margin: -257px 0 0 470px;
+    font-size: 65px;
+}
+
+#wel{
+
+    color: #DB8383;
+    margin: 48px 0 0 436px;
+    font-size: 22px;
+    font-family: inkia;
+}
+
+#ph4{
+
+    width: 440px;
+    height: 295px;
+    margin: -230px 0 0 1043px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body 2 */
+
+
+#ph5{
+
+    height: 330px;
+    width: 530px;
+    margin: 25px 0 0 0;
+
+}
+
+#our{
+    color: #DB8383;
+    margin: -319px 0 0 570px;
+    font-size: 22px;
+    font-family: inkia;
+}
+
+#cater{
+
+    color: #B80606;
+    margin: 25px 0 0 568px;
+    font-size: 31px;
+    font-family: inkia;
+}
+
+#vd{
+
+    color: white;
+    background-color: #FFC7C7;
+    height: 30px;
+    width: 70px;
+    border: none;
+    box-shadow: 0px 4px 10px -8px rgb(0, 0, 0);
+    BORDER-RADIUS: 59px;
+    margin: 15px 0 0 570px;
+
+}
+
+#power{
+
+    color: #B80606;
+    margin: 40px 0 0 20px;
+    font-size: 31px;
+    font-family: inkia;
+
+}
+
+
+#ph6{
+
+    width: 280px;
+    height: 380px;
+    margin: 0 0 0 1239px;
+}
+
+#ph7{
+
+    width: 245px;
+    height: 330px;
+    margin: -680px 0 0 1053px;
+
+}
+
+#world{
+
+    color: #DB8383;
+    margin: -177px 0 0 23px;
+    font-size: 22px;
+    font-family: inkia;
+
+}
+
+#np{
+
+    color: #B80606;
+    text-decoration: underline;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+
+#div25{
+    background-color: #F9F7F6;
+    width: 1519px;
+    height: 370px;
+    margin: 40px 0 0 0;
+}
+
+#ph25{
+    height: 120px;
+    width: 216px;
+    margin: 30px 0 0 10px;
+}
+
+
+#div26{
+    font-size: 25px;
+    margin: -45px 0 0 450px;
+    font-family: lnica;
+    color: black;
+}
+
+#z1{
+
+    color: black;
+}
+
+#div27{
+    font-size: 25px;
+    margin: -151px 0 0 700px;
+    font-family: lnica;
+    color: black;
+}
+
+
+#z2{
+
+    color: black;
+}
+
+#social{
+    font-size: 25px;
+    font-family: lnica;
+    margin: -112px 0 0 1110px;
+}
+
+
+#div28{
+    display: flex;
+    margin: 25px 0 0 1071px ;
+}
+
+#ph26{
+    height: 30px ;
+    width: 30px ;
+    margin: 0 0 0 15px;
+}

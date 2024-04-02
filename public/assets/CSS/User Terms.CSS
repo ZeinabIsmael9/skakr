@@ -1,0 +1,329 @@
+/*nav*/
+
+#div1{
+
+    width: 1519px;
+    height: 65px;
+    background-color: #FFE3E3;
+    display: flex;
+    box-shadow: 0px 3px 10px -7px rgb(0, 0, 0);
+
+}
+
+#ph1{
+
+    height: 62px;
+    width: 130px;
+    margin: 3px 0 0 0;
+
+}
+
+#home{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 360px;
+}
+
+#cate{
+
+    color: white;
+    border: none;
+    font-size: 20px;
+    background: none;
+    font-family: Kadwa;
+    margin: 9px 0 0 85px;
+}
+
+#own{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#shop{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#cont{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#ph100{
+
+    width: 33px;
+    height: 30px;
+    margin: 17px 0 0 120px;
+
+
+}
+
+#ph46{
+    
+    width: 35px;
+    height:35px;
+    margin: 14px 0 0 47px;
+}
+
+#ph47{
+
+    width: 14px;
+    height: 14px;
+    margin: 37px 0 0 -9px;
+    
+}
+
+#car{
+    font-family: sans-serif;
+}
+#car:hover{
+    background-color: #FFE3E3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body 1*/
+
+
+#wel{
+
+    font-size: 33px;
+    font-family: inika;
+    margin: 47px 0 0 100px;
+    color: #DB8383;
+}
+
+
+#our{
+
+    color: black;
+    font-family: inika;
+    font-size: 33px;
+    margin: 40px 0 0 100px;
+}
+
+#we{
+
+    color: black;
+    font-family: inika;
+    font-size: 33px;
+    margin: 40px 0 0 100px;
+}
+
+
+#pride{
+
+    color: black;
+    font-family: inika;
+    font-size: 33px;
+    margin: 70px 0 0 100px;
+}
+
+
+#join{
+
+    color: black;
+    font-family: inika;
+    font-size: 33px;
+    margin: 40px 0 0 100px;
+}
+
+
+#fashion{
+
+    color: #DB8383;
+    font-family: inika;
+    font-size: 33px;
+    margin: 40px 0 0 100px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+
+#div25{
+    background-color: #F9F7F6;
+    width: 1519px;
+    height: 370px;
+    margin: 40px 0 0 0;
+}
+
+#ph25{
+    height: 120px;
+    width: 216px;
+    margin: 30px 0 0 10px;
+}
+
+
+#div26{
+    font-size: 25px;
+    margin: -45px 0 0 450px;
+    font-family: lnica;
+    color: black;
+}
+
+#z1{
+
+    color: black;
+}
+
+#div27{
+    font-size: 25px;
+    margin: -151px 0 0 700px;
+    font-family: lnica;
+    color: black;
+}
+
+
+#z2{
+
+    color: black;
+}
+
+#social{
+    font-size: 25px;
+    font-family: lnica;
+    margin: -112px 0 0 1110px;
+}
+
+
+#div28{
+    display: flex;
+    margin: 25px 0 0 1071px ;
+}
+
+#ph26{
+    height: 30px ;
+    width: 30px ;
+    margin: 0 0 0 15px;
+}

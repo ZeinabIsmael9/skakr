@@ -1,0 +1,884 @@
+/*nav*/
+
+#div1{
+
+    width: 1519px;
+    height: 65px;
+    background-color: #FFE3E3;
+    display: flex;
+    box-shadow: 0px 3px 10px -7px rgb(0, 0, 0);
+
+}
+
+#ph1{
+
+    height: 62px;
+    width: 130px;
+    margin: 3px 0 0 0;
+
+}
+
+#home{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 360px;
+}
+
+#cate{
+
+    color: #DB7575;
+    border: none;
+    font-size: 20px;
+    background: none;
+    font-family: Kadwa;
+    margin: 9px 0 0 85px;
+}
+
+#own{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#shop{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#cont{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#ph100{
+
+    width: 33px;
+    height: 30px;
+    margin: 17px 0 0 120px;
+
+
+}
+
+#ph46{
+    
+    width: 35px;
+    height:35px;
+    margin: 14px 0 0 47px;
+}
+
+#ph47{
+
+    width: 14px;
+    height: 14px;
+    margin: 37px 0 0 -9px;
+    
+}
+
+#car{
+    font-family: sans-serif;
+}
+#car:hover{
+    background-color: #FFE3E3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body 1 */
+
+
+#div47{
+
+    display: flex;
+    margin: 30px 0 0 60px;
+}
+
+#gan{
+
+    color: #B80606;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#skirt{
+
+    color: #A6A6A6 ;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#dre{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#hood{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#bl{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#set{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#bas{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#pan{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#wear{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#sale{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body 2*/
+
+#div62{
+
+    display: flex;
+    color: #A6A6A6;
+    margin: 40px 0 0 152px;
+
+}
+
+
+#denim{
+
+    color: black;
+    margin: 30px 0 0 170px;
+    font-size: 26px;
+
+}
+
+#l60{
+
+    font-size: 27px;
+    color: black;
+    margin: 20px 0 0 173px;
+}
+
+
+#div63{
+
+    display: flex;
+    height: 25px;
+    margin: -20px 0 0 367px;
+
+}
+
+#color{
+
+    color: black;
+    font-size: 23px;
+    margin: 29px 0 0 167px;
+
+}
+
+#ph53{
+
+    height: 47px;
+    width: 130px;
+    margin: 15px 0 0 167px;
+
+}
+
+#size{
+
+    color: black;
+    font-size: 23px;
+    margin: 29px 0 0 167px;
+
+}
+
+#div64{
+
+    display: flex;
+    margin: 15px 0 0 167px;
+
+}
+
+#div65{
+
+    height: 45px;
+    width: 45px;
+    background-color: white;
+    box-shadow: 0px 0px 5px -2px rgb(0, 0, 0);
+
+}
+
+#div66{
+
+    height: 45px;
+    width: 45px;
+    background-color: white;
+    margin: 0 0 0 15px;
+    box-shadow: 0px 0px 5px -2px rgb(0, 0, 0);
+
+}
+
+#div67{
+
+    height: 45px;
+    width: 45px;
+    background-color: white;
+    margin: 0 0 0 15px;
+    box-shadow: 0px 0px 5px -2px rgb(0, 0, 0);
+
+}
+
+#div68{
+
+    height: 45px;
+    width: 45px;
+    background-color: white;
+    margin: 0 0 0 15px;
+    box-shadow: 0px 0px 5px -2px rgb(0, 0, 0);
+
+}
+
+#M{
+    text-align: center;
+    margin: 9px 0 0 0;
+}
+
+#login{
+
+    color: white;
+    background-color: #FFC7C7;
+    height: 34px;
+    width: 130px;
+    border: none;
+    box-shadow: 0px 4px 10px -8px rgb(0, 0, 0);
+    BORDER-RADIUS: 59px;
+    margin: 60px 75px 0 250px;
+}
+#tablee{
+    font-size: 30px;
+    box-shadow: 0px 0px 5px -2px rgb(0, 0, 0);
+}
+
+#table{
+    width: 50px;
+    font-size: 25px;
+    box-shadow: 0px 0px 5px -2px rgb(0, 0, 0);
+}
+
+#tab{
+    text-align: center;
+}
+
+#ph54{
+
+    height: 500px;
+    width: 660px;
+    margin: 35px 0 0 0;
+}
+
+
+#div69{
+
+    display: flex;
+
+}
+
+#ph55{
+
+    width: 80px;
+    height: 80px;
+    margin: 27px -8px 0 49px;
+}
+
+#span{
+
+    background-color: #B80606;
+
+}
+
+#c{
+    margin: 0 45px 0 -39px;
+}
+
+#div{
+
+    width: 1519px;
+    height: 1px;
+    background-color: #828282;
+    margin: 100px 0 0 0;
+}
+
+#div70{
+    background-color: #828282;
+    width: 1519px;
+    height: 1px;
+    margin: 60px 0 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body 2 */
+
+
+
+
+#div71{
+    display: flex;
+    margin: 40px 0 0 45px;
+
+}
+
+#des{
+    color: #A6A6A6;
+    margin: 0 40px 0 0;
+
+}
+
+#fee{
+    color: #B80606 ;
+}
+
+#div72{
+    text-align: center;
+    background: none;
+    border: 1px solid #FFC7C7;
+    border-radius: 5px;
+    width: 1350px;
+    height: 440px;
+    margin: 45px 0 0 30px;
+}
+
+#share{
+    color: black;
+    margin: 40px 1070px 0 0;
+}
+
+#rate{
+    color: black;
+    margin: 25px 1080px 0 0;
+
+}
+
+#ph56{
+    height: 26px;
+    margin: -51px 860px 0 0;
+
+}
+
+#revi{
+
+    margin: 0 1075px 0 0;
+}
+
+#rev{
+    width: 700px;
+    height: 60px;
+    margin: 5px 425px 0 0;
+    border: 2px solid #c1c1c1;
+
+}
+
+#div73{
+    display: flex;
+    margin: 25px 0 0 111px;
+}
+
+#div74{
+    margin: 0 0 0 0;
+}
+
+#name{
+
+    margin: 0 144px 15px 0;
+
+}
+
+#text{
+
+    width: 150px;
+    height: 40px;
+    border: 2px solid #c1c1c1;
+    margin: 0 37px 0 0px;
+
+}
+
+#div75{
+
+    margin: 0 0 0 0;
+}
+
+#em{
+
+    margin: 0 144px 15px 0;
+
+
+
+}
+
+#email{
+
+    width: 511px;
+    height: 40px;
+    border: 2px solid #c1c1c1;
+    margin: 0 -328px 0 0px;
+
+}
+
+#vd{
+
+    color: white;
+    background-color: #FFC7C7;
+    height: 30px;
+    width: 73px;
+    border: none;
+    box-shadow: 0px 4px 10px -8px rgb(0, 0, 0);
+    BORDER-RADIUS: 59px;
+    margin: 31px 0 0 530px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body 3*/
+
+
+#sugg{
+    color: black;
+    margin: 70px 0 0 27px;
+    font-size: 26px;
+
+}
+
+
+#div56{
+
+    margin: 60px 40px 0 40px;
+}
+
+
+#div57{
+    margin: 60px 0 0 0;
+}
+
+
+
+#pro{
+
+    font-size: 30px;
+    margin: 0px 0 0 -4px;
+}
+
+
+#div48{
+
+    display: flex;
+    margin: 17px 0 0 -4px;
+}
+
+
+#div49{
+
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    margin: 0 16px 0 0;
+    background-color: black;
+    box-shadow: 0px 8px 10px -6px rgb(0, 0, 0);
+}
+
+#div50{
+
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    margin: 0 16px 0 0;
+    background-color: white;
+    box-shadow: 0px 8px 10px -6px rgb(0, 0, 0);
+}
+
+#div51{
+
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    margin: 0 16px 0 0;
+    background-color: beige;
+    box-shadow: 0px 8px 10px -6px rgb(0, 0, 0);
+}
+
+#div52{
+
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: yellow;
+    box-shadow: 0px 8px 10px -6px rgb(0, 0, 0);
+
+}
+
+#div53{
+
+    display: flex;
+    height: 30px;
+    margin: 23px 0 0 100px;
+
+}
+
+#div54{
+    display: flex;
+}
+
+#l6{
+
+    font-size: 32px;
+    margin: 0 0 0 -3px;
+    
+}
+
+#ph48{
+
+    height: 35px;
+    width: 40px;
+    margin: 10px 0 0 130px;
+}
+
+#ph50{
+    height: 345px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+
+#div25{
+    background-color: #F9F7F6;
+    width: 1519px;
+    height: 370px;
+    margin: 40px 0 0 0;
+}
+
+#ph25{
+    height: 120px;
+    width: 216px;
+    margin: 30px 0 0 10px;
+}
+
+
+#div26{
+    font-size: 25px;
+    margin: -45px 0 0 450px;
+    font-family: lnica;
+    color: black;
+}
+
+#z1{
+
+    color: black;
+}
+
+#div27{
+    font-size: 25px;
+    margin: -151px 0 0 700px;
+    font-family: lnica;
+    color: black;
+}
+
+
+#z2{
+
+    color: black;
+}
+
+#social{
+    font-size: 25px;
+    font-family: lnica;
+    margin: -112px 0 0 1110px;
+}
+
+
+#div28{
+    display: flex;
+    margin: 25px 0 0 1071px ;
+}
+
+#ph26{
+    height: 30px ;
+    width: 30px ;
+    margin: 0 0 0 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

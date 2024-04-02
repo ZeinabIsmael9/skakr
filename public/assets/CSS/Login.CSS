@@ -1,0 +1,108 @@
+#div29{
+
+    display: flex;
+}
+
+
+#div30{
+
+    width: 440px;
+    height: 550px;
+    background-color: white;
+    margin: 100px 0 0 385px;
+    border-top-left-radius: 15px ;
+    border-bottom-left-radius: 15px ;
+    box-shadow: 0px 4px 10px -8px rgb(0, 0, 0);
+
+}
+
+#ph27{
+
+    width: 285px;
+    height: 550px;
+    margin: 100px 0 0 0;
+    border-top-right-radius: 15px ;
+    border-bottom-right-radius: 15px ;
+}
+
+#ph28{
+
+    width: 100px;
+    height: 53px;
+}
+
+#acc{
+    color: #DB8383;
+    font-family: relaway;
+    font-size: 21px;
+    margin: 0 0 0 135px;
+}
+
+
+#div500{
+
+    margin: 20px 0 0 95px;
+}
+
+#back{
+
+    text-align: center;
+    color: #DB8383;
+    margin: 65px 0 0 0;
+    font-family: archivo;
+
+}
+
+#det{
+
+    text-align: center;
+    color: #C3C3C3 ;
+    font-size: 12px;
+}
+
+#email{
+
+    width: 300px;
+    height: 36px;
+    border: 2px solid #E4A2A2;
+    border-radius: 6px;
+    color: #C3C3C3;
+    margin: 20px 0 0 70px;
+    padding: 0 0 0 15px;
+
+}
+
+#pass{
+
+    width: 300px;
+    height: 36px;
+    border: 2px solid #E4A2A2;
+    border-radius: 6px;
+    color: #C3C3C3;
+    margin: 20px 0 0 70px;
+    padding: 0 0 0 15px;
+
+}
+
+
+#forget{
+
+    color: #DB8383;
+    font-family: relaway;
+    font-size: 19px;
+    margin: 12px 0 0 237px;
+
+}
+
+
+#login{
+
+    color: white;
+    background-color: #FFC7C7;
+    height: 38px;
+    width: 94px;
+    border: none;
+    box-shadow: 0px 4px 10px -8px rgb(0, 0, 0);
+    BORDER-RADIUS: 59px;
+    margin: 60px 0 0 166px;
+}

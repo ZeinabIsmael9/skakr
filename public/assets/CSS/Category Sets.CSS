@@ -1,0 +1,432 @@
+/*nav*/
+
+#div1{
+
+    width: 1519px;
+    height: 65px;
+    background-color: #FFE3E3;
+    display: flex;
+    box-shadow: 0px 3px 10px -7px rgb(0, 0, 0);
+
+}
+
+#ph1{
+
+    height: 62px;
+    width: 130px;
+    margin: 3px 0 0 0;
+
+}
+
+#home{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 360px;
+}
+
+#cate{
+
+    color: #DB7575;
+    border: none;
+    font-size: 20px;
+    background: none;
+    font-family: Kadwa;
+    margin: 9px 0 0 85px;
+}
+
+#own{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#shop{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#cont{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#ph100{
+
+    width: 33px;
+    height: 30px;
+    margin: 17px 0 0 120px;
+
+
+}
+
+#ph46{
+    
+    width: 35px;
+    height:35px;
+    margin: 14px 0 0 47px;
+}
+
+#ph47{
+
+    width: 14px;
+    height: 14px;
+    margin: 37px 0 0 -9px;
+    
+}
+
+#car{
+    font-family: sans-serif;
+}
+#car:hover{
+    background-color: #FFE3E3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body 1 */
+
+
+#div47{
+
+    display: flex;
+    margin: 30px 0 0 60px;
+}
+
+#gan{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#skirt{
+
+    color: #A6A6A6 ;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#dre{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#hood{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#bl{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#set{
+
+    color: #B80606;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#bas{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#pan{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#wear{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+#sale{
+
+    color: #A6A6A6;
+    font-size: 22px;
+    margin: 0 0 0 65px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body 2*/
+
+
+#div55{
+
+    width: 18rem;
+    border: none;
+}
+
+#div55:hover{
+
+    box-shadow: 0px 2px 2px 0px #DB7575;
+}
+
+#ph50{
+
+    height: 361px;
+}
+
+#div56{
+
+    margin: 60px 0 0 60px;
+}
+
+
+#div57{
+    margin: 60px 0 0 0;
+}
+
+
+
+#pro{
+
+    font-size: 30px;
+    margin: 0px 0 0 -4px;
+}
+
+
+#div48{
+
+    display: flex;
+    margin: 17px 0 0 -4px;
+}
+
+
+#div49{
+
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    margin: 0 16px 0 0;
+    background-color: black;
+    box-shadow: 0px 8px 10px -6px rgb(0, 0, 0);
+}
+
+#div50{
+
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    margin: 0 16px 0 0;
+    background-color: white;
+    box-shadow: 0px 8px 10px -6px rgb(0, 0, 0);
+}
+
+#div51{
+
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    margin: 0 16px 0 0;
+    background-color: beige;
+    box-shadow: 0px 8px 10px -6px rgb(0, 0, 0);
+}
+
+#div52{
+
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: yellow;
+    box-shadow: 0px 8px 10px -6px rgb(0, 0, 0);
+
+}
+
+#div53{
+
+    display: flex;
+    height: 30px;
+    margin: 23px 0 0 100px;
+
+}
+
+#div54{
+    display: flex;
+}
+
+#l6{
+
+    font-size: 32px;
+    margin: 0 0 0 -3px;
+    
+}
+
+#ph48{
+
+    height: 35px;
+    width: 40px;
+    margin: 10px 0 0 130px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+
+#div25{
+    background-color: #F9F7F6;
+    width: 1519px;
+    height: 370px;
+    margin: 40px 0 0 0;
+}
+
+#ph25{
+    height: 120px;
+    width: 216px;
+    margin: 30px 0 0 10px;
+}
+
+
+#div26{
+    font-size: 25px;
+    margin: -45px 0 0 450px;
+    font-family: lnica;
+    color: black;
+}
+
+#z1{
+
+    color: black;
+}
+
+#div27{
+    font-size: 25px;
+    margin: -151px 0 0 700px;
+    font-family: lnica;
+    color: black;
+}
+
+
+#z2{
+
+    color: black;
+}
+
+#social{
+    font-size: 25px;
+    font-family: lnica;
+    margin: -112px 0 0 1110px;
+}
+
+
+#div28{
+    display: flex;
+    margin: 25px 0 0 1071px ;
+}
+
+#ph26{
+    height: 30px ;
+    width: 30px ;
+    margin: 0 0 0 15px;
+}

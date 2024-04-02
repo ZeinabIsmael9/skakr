@@ -1,0 +1,100 @@
+#div40{
+
+    display: flex;
+}
+
+#div41{
+
+    width: 440px;
+    height: 550px;
+    background-color: white;
+    margin: 100px 0 0 385px;
+    border-top-left-radius: 15px ;
+    border-bottom-left-radius: 15px ;
+    box-shadow: 0px 4px 10px -8px rgb(0, 0, 0);
+
+}
+
+#ph40{
+
+    width: 100px;
+    height: 53px;
+}
+
+#up{
+
+    text-align: center;
+    color: #DB8383;
+    margin: 50px 0 0 0;
+    font-family: archivo;
+
+}
+
+
+#name{
+
+    width: 300px;
+    height: 36px;
+    border: 2px solid #E4A2A2;
+    border-radius: 6px;
+    color: #C3C3C3;
+    margin: 20px 0 0 70px;
+
+}
+
+
+#emaill{
+
+    width: 300px;
+    height: 36px;
+    border: 2px solid #E4A2A2;
+    border-radius: 6px;
+    color: #C3C3C3;
+    margin: 20px 0 0 70px;
+
+}
+
+#password{
+
+    width: 300px;
+    height: 36px;
+    border: 2px solid #E4A2A2;
+    border-radius: 6px;
+    color: #C3C3C3;
+    margin: 20px 0 0 70px;
+
+}
+
+#conf{
+
+    width: 300px;
+    height: 36px;
+    border: 2px solid #E4A2A2;
+    border-radius: 6px;
+    color: #C3C3C3;
+    margin: 20px 0 0 70px;
+
+}
+
+
+#sign{
+
+    color: white;
+    background-color: #FFC7C7;
+    height: 38px;
+    width: 94px;
+    border: none;
+    box-shadow: 0px 4px 10px -8px rgb(0, 0, 0);
+    BORDER-RADIUS: 59px;
+    margin: 60px 0 0 166px;
+}
+
+
+#ph41{
+
+    width: 315px;
+    height: 550px;
+    margin: 100px 0 0 0;
+    border-top-right-radius: 15px ;
+    border-bottom-right-radius: 15px ;
+}
