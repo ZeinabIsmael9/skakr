@@ -13,12 +13,13 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->date('date');
-            $table->decimal('price')->nullable();
             $table->boolean('is_custom')->default(false);
+            $table->string('discount_code')->nullable();
+            $table->decimal('sub_total')->unsigned()->comment('before calculating discount');
+            $table->decimal('total')->unsigned()->comment('after calculating discount');
             $table->decimal('paid')->nullable();
-            $table->foreignId('design_id')->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade');
+
+            $table->foreignId('user_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

@@ -11,17 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('order_details', function (Blueprint $table) {
+        Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('order_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
-            $table->boolean('is_custom')->default(false);
-            $table->foreignId('item_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
-            $table->unsignedInteger('quantity')->unsigned();
-            $table->foreignId('desgin_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('product_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('color_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('size_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('material_id')->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade');
-            $table->decimal('amount')->nullable();
+            $table->decimal('original_price')->unsigned()->comment('before discount');
+            $table->decimal('price')->unsigned()->comment('after discount');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('order_details');
+        Schema::dropIfExists('items');
     }
 };
