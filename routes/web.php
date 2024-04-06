@@ -34,9 +34,11 @@ Route::get('/help', function () {
 });
 
 Route::get('/shop', function () {
-//    return \App\Models\Product::with('colors','items.color')->get();
-    // code get all prodctus with first item image for evry prodct and all avalvibel collors for this prodcuts
-    return view('shop');
+      $products = \App\Models\Product::with('firstItem.media','colors')->get();
+//      $products = \App\Models\Product::where('id',5)->with('firstItem.media','colors')->get();
+//    return  $products ;
+      // code get all prodctus with first item image for evry prodct and all avalvibel collors for this prodcuts
+    return view('shop',compact('products'));
 });
 
 Route::get('/userterms', function () {

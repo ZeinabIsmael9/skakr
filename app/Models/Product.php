@@ -27,15 +27,21 @@ class Product extends Model
 
     public function colors()
     {
-        return $this->belongsToMany(Color::class, 'items');
-    }
-    public function firstItemImage()
-    {
-        return $this->hasOneThrough(Media::class, Item::class, 'product_id', 'model_id', 'id', 'media_id')->take(1);
+        return $this->belongsToMany(Color::class, 'items')->distinct();
     }
 
-    public function itemImages()
+    public function firstItem(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
-        return $this->hasManyThrough(Media::class, Item::class, 'product_id', 'model_id', 'id', 'media_id');
+        return $this->hasOne(Item::class);
     }
+//    public function firstItemImage()
+//    {
+//
+//        return $this->hasOneThrough(Media::class, Item::class, 'product_id', 'model_id', 'id', 'media_id')->take(1);
+//    }
+//
+//    public function itemImages()
+//    {
+//        return $this->hasManyThrough(Media::class, Item::class, 'product_id', 'model_id', 'id', 'media_id');
+//    }
 }
