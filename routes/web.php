@@ -34,6 +34,8 @@ Route::get('/help', function () {
 });
 
 Route::get('/shop', function () {
+//    return \App\Models\Product::with('colors','items.color')->get();
+    // code get all prodctus with first item image for evry prodct and all avalvibel collors for this prodcuts
     return view('shop');
 });
 

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('carts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('item_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
-            $table->smallIncrements('quantity')->unsigned();
+            $table->smallInteger('quantity')->unsigned();
             $table->foreignId('user_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
 //            $table->foreignId('design_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
 //            $table->foreignId('color_id')->constrained()->onDelete('cascade')->onUpdate('cascade');

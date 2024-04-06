@@ -17,7 +17,7 @@ return new class extends Migration
             $table->boolean('is_custom')->default(false);
             $table->foreignId('item_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedInteger('quantity')->unsigned();
-            $table->foreignId('desgin_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('design_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('color_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('size_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('material_id')->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade');

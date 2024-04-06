@@ -65,7 +65,7 @@
     width: 33px;
     height: 30px;
     margin: 17px 0 0 105px;
-    
+
 }
 
 #log{
@@ -252,7 +252,7 @@
     width: 250px;
     margin: 30px 0 0 0;
 
-    
+
 }
 
 #ph6{
@@ -260,7 +260,7 @@
     height: 450px;
     width: 400px;
     margin: 30px 0 0 -109px;
-    
+
 }
 
 #ph7{
@@ -268,7 +268,7 @@
     height: 450px;
     width: 400px;
     margin: 30px 0 0 -70px;
-    
+
 }
 
 #ph8{
@@ -276,7 +276,7 @@
     height: 450px;
     width: 400px;
     margin: 30px 0 0 -32px;
-    
+
 }
 
 #ph9{
@@ -284,7 +284,7 @@
     height: 450px;
     width: 400px;
     margin: 30px 0 0 6px;
-    
+
 }
 
 #ph10{
@@ -292,7 +292,7 @@
     height: 450px;
     width: 200px;
     margin: 30px 0 0 28px;
-    
+
 }
 
 
@@ -438,7 +438,7 @@
     height: 40px;
     border-radius: 95px;
     margin: 40px 0 0 655px;
-    
+
 }
 
 #div19{
@@ -536,7 +536,7 @@
 }
 
 
-#pro{
+.home #pro{
     color: black;
     font-size: 34px;
     padding: 187px 0 0 17px;
@@ -603,7 +603,7 @@
     font-size: 40px;
     color: #B80606;
     margin: 55px 0 0 40px ;
- 
+
 }
 
 
@@ -612,7 +612,7 @@
     height: 325px;
     width: 300px;
     background-color: #CF7676 ;
-    
+
 
 }
 
