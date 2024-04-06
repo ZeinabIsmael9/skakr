@@ -1,7 +1,7 @@
 
     <div class="col-md-3">
         <div class="card" id="div55">
-            <img src="{{ asset('assets/IMG/ff (9).png')}}" class="card-img-top" alt="..." id="ph50">
+            <img src="{{ asset($product->firstItem->media->first()->getUrl())}}" class="card-img-top" alt="..." id="ph50">
             <div class="card-body">
                 <p class="card-title" id="pro">{{$product->name}}</p>
 
