@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,67 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/privacy', function () {
-    return view('privacy');
-});
-
-Route::get('/help', function () {
-    return view('help');
-});
-
-Route::get('/shop', function () {
-      $products = \App\Models\Product::with('firstItem.media','colors')->get();
-//      $products = \App\Models\Product::where('id',5)->with('firstItem.media','colors')->get();
-//    return  $products ;
-      // code get all prodctus with first item image for evry prodct and all avalvibel collors for this prodcuts
-    return view('shop',compact('products'));
-});
-
-Route::get('/userterms', function () {
-    return view('user-terms');
-});
-
-Route::get('/itemdetail', function () {
-    return view('item-detail');
-});
-
-Route::get('/cart', function () {
-    return view('cart');
-});
-
-Route::get('/shoppingcart', function () {
-    return view('shopping-cart');
-});
-
-Route::get('/categories', function () {
-    return view('categories');
-});
-
-Route::get('/client-data', function () {
-    return view('client-data');
-});
+Route::get('/', [PageController::class, 'index'])->name('index');
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::get('/about', [PageController::class, 'about'])->name('about'); 
+Route::get('/privacy', [PageController::class, 'privacy'])->name('privacy');
+Route::get('/help', [PageController::class, 'help'])->name('help'); 
+Route::get('/user-terms', [PageController::class, 'userterms'])->name('user-terms');
+Route::get('/item-detail', [PageController::class, 'itemdetail'])->name('item-detail');
+Route::get('/cart', [PageController::class, 'cart'])->name('cart'); 
+Route::get('/shopping-cart', [PageController::class, 'shoppingcart'])->name('shopping-cart'); 
+Route::get('/categories', [PageController::class, 'categories'])->name('categories'); 
+Route::get('/client-data', [PageController::class, 'clientdata'])->name('client-data'); 
+Route::get('/received', [PageController::class, 'received'])->name('received'); 
+Route::get('/payment-details', [PageController::class, 'paymentdetail'])->name('payment-details');
+Route::get('/trending', [PageController::class, 'trending'])->name('trending'); 
+Route::get('/shop', [PageController::class, 'shop'])->name('shop'); 
+Route::get('/designyourown', [PageController::class, 'shop'])->name('design-your-own'); 
 
 
-Route::get('/received', function () {
-    return view('received');
-});
-
-Route::get('/payment-details', function () {
-    return view('payment-details');
-});
-
-Route::get('/trending', function () {
-    return view('trending');
-});
+?>

@@ -19,10 +19,9 @@
     <div id="div1">
 
         <img src="{{ asset('assets/IMG/Property 1=تصميم بدون عنوان (65) 2(1).png') }}" id="ph1">
-        <a id="home" href="{{ asset('assets/HTML/Home.html') }}"> Home </a>
-
+        <a id="home" href="{{ route('index') }}"> Home </a>
         <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle" href="{{ asset('assets/HTML/Category Cardigan.html') }}" role="button" data-toggle="dropdown" aria-expanded="false" id="cate">
+            <a class="btn btn-secondary dropdown-toggle" href="{{ route('categories') }}" role="button" data-toggle="dropdown" aria-expanded="false" id="cate">
               Category
             </a>
 
@@ -42,8 +41,8 @@
         </div>
 
         <a id="own" href="{{ asset('assets/HTML/Design Your Own 1.html') }}"> Design Your Own </a>
-        <a id="shop" href="{{ asset('assets/HTML/New Collection.html') }}"> Shop </a>
-        <a id="cont" href="{{ asset('assets/HTML/Contact.html') }}"> Contact </a>
+        <a id="shop" href=" {{ route('shop') }}"> Shop </a>
+        <a id="cont" href="{{ route('contact') }}"> Contact </a>
         <img src="{{ asset('assets/IMG/Property 1=Vector.png') }}" id="ph600">
         <a id="log" href="{{ asset('assets/HTML/Login.html') }}"> Login </a>
 
@@ -55,34 +54,29 @@
 
 
 
-     <!-- footer -->
-     <div id="div25">
-            <img src="{{ asset('assets/IMG/Property 1=تصميم بدون عنوان (65) 2(1).png') }}" id="ph25">
-            <div id="div26">
-                <a href="{{ asset('assets/HTML/About.html') }}" id="z1">About</a>
-                <br>
-                <a href="{{ asset('assets/HTML/Category Cardigan.html') }}" id="z1">Categories</a>
-                <br>
-                <a id="z1" href="{{ asset('assets/HTML/') }}">Shop</a>
-                <br>
-                <a id="z1" href="{{ asset('assets/HTML/Contact.html') }}">Contact</a>
-            </div>
-            <div id="div27">
-                <a href="{{ asset('assets/HTML/User Terms.html') }}" id="z2">User Terms</a>
-                <br>
-                <a href="{{ asset('assets/HTML/Privacy.html') }}" id="z2">Privacy</a>
-                <br>
-                <a href="{{ asset('assets/HTML/Help.html') }}" id="z2">Help</a>
-            </div>
+<div id="div25">
+    <img src="{{ asset('assets/IMG/Property 1=تصميم بدون عنوان (65) 2(1).png') }}" id="ph25">
+    <div id="div26">
+        <a href="{{ route('about') }}" id="z1">About</a>
+        <br>
+        <a href="{{ route('categories') }}" id="z1">Categories</a>
+        <br>
+        <a href="{{ route('shop') }}" id="z1">Shop</a>
+        <br>
+        <a href="{{ route('contact') }}" id="z1">Contact</a>
+    </div>
+    <div id="div27">
+        <a href="{{ route('user-terms') }}" id="z2">User Terms</a>
+        <br>
+        <a href="{{ route('privacy') }}" id="z2">Privacy</a>
+        <br>
+        <a href="{{ route('help') }}" id="z2">Help</a>
+    </div>
 
-            <h4 id="social" class="font-weight-bold">Social</h4>
-            <div id="div28">
-                <img src="{{ asset('assets/IMG/facebook (2).png') }}" id="ph26">
-                <img src="{{ asset('assets/IMG/whatssapp-big-logo.png') }}" id="ph26">
-                <img src="{{ asset('assets/IMG/instagram (2).png') }}" id="ph26">
-            </div>
-        </div>
-
-    </body>
-</html>
-
+    <h4 id="social" class="font-weight-bold">Social</h4>
+    <div id="div28">
+        <img src="{{ asset('assets/IMG/facebook (2).png') }}" id="ph26">
+        <img src="{{ asset('assets/IMG/whatssapp-big-logo.png') }}" id="ph26">
+        <img src="{{ asset('assets/IMG/instagram (2).png') }}" id="ph26">
+    </div>
+</div>

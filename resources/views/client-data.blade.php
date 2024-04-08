@@ -38,7 +38,7 @@
             <br>
 
 
-            <a href="../HTML/Received.html">
+            <a href=" {{ route('received') }}">
 
                 <button id="vd">Confirm</button>
 

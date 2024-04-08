@@ -58,7 +58,7 @@
                     </div>
                 </div>
 
-                <a  href="{{ asset('assets/HTML/Card.html')}}">
+                <a  href="{{route('cart')}}">
 
                   <button id="login">Add To Bag</button>
 
@@ -89,45 +89,6 @@
 
         <div id="div70"></div>
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <!-- body 2-->

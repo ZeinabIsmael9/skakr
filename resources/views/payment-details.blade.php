@@ -15,7 +15,7 @@
 
         <h1 id="trend">Payment Details</h1>
 
-        <a href="{{ asset('assets/HTML/Client Data.html')}}">
+        <a href="{{route('client-data')}}">
 
             <button id="vd">Order</button>
 

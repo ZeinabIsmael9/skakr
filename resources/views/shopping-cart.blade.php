@@ -47,7 +47,7 @@
 
             </div>
 
-            <a href="../HTML/Client Data.html">
+            <a href="{{route('client-data')}}">
 
                 <button id="login">Order</button>
 

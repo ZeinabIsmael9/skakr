@@ -58,7 +58,7 @@
         <p id="l8">1800LE</p>
 
 
-        <a href="{{ asset('assets/HTML/Shopping Card.html')}}">
+        <a href=" {{ route('shopping-cart') }}">
           <button id="vd">View Card</button>
         </a>
         

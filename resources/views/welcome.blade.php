@@ -66,7 +66,7 @@
                 <div class="col-md-2">
                     <div id="div13">
                         <div id="div14">
-                            <a href="{{ asset('assets/HTML/Trending.html') }}" id="view">View All</a>
+                            <a href="{{ route('trending') }}" id="view">View All</a>
                             <div id="div15">
                                 <div id="div16">
                                     <img src="{{ asset('assets/IMG/Polygon 4.png') }}" id="ph15">
@@ -93,7 +93,7 @@
                 <h1 id="ramadan" class="font-weight-bold">Ramadan Collection</h1>
                 <div id="div9">
                     <div id="div10">
-                        <a id="exp" href="{{ asset('assets/HTML/New Collection.html') }}">Shop Now</a>
+                        <a id="exp" href="{{ route('shop') }}">Shop Now</a>
                         <div id="div11">
                             <div id="div12">
                                 <img src="{{ asset('assets/IMG/Polygon 4.png') }}" id="ph13">
@@ -113,7 +113,7 @@
             <h1 id="make" class="font-weight-bold">let's make your <span style="display: block;"></span> clothing style </h1>
             <div id="div18">
                 <div id="div19">
-                    <a id="go" href="{{ asset('assets/HTML/Design Your Own 1.html') }}">Let's Go</a>
+                    <a id="go" href="{{ route('design-your-own') }}">Let's Go</a>
                     <div id="div20">
                         <div id="div21">
                             <img src="{{ asset('assets/IMG/Polygon 4.png') }}" id="ph18">
@@ -131,7 +131,7 @@
 
             <div id="div1000">
                 <h1 id="arr">New Arrival</h1>
-                <a id="se" href="{{ asset('assets/HTML/New Collection.html') }}">See All</a>
+                <a id="se" href="{{route('shop')}}">See All</a>
             </div>
         
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
