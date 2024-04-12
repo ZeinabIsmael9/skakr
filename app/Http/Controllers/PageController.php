@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Item;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -28,10 +30,15 @@ class PageController extends Controller
         }
         
         
-        public function  categories()
-        {
-            return view('categories');
-        }
+        public function categories($categoryId)
+            {
+                $products = Product::where('category_id', $categoryId)
+                ->with('firstItem.media', 'colors')
+                ->get();
+                $categories = Category::all();
+                //return $categories;
+                return view('categories', compact('products','categories'));
+            }
         
         
         public function  clientdata()
@@ -44,11 +51,19 @@ class PageController extends Controller
             return view('help');
         }
 
-        public function  itemdetail()
-        {
-            return view('item-detail');
-        }
         
+        public function itemdetail($itemId)
+        {
+            // $product = Product::findOrFail($itemId);
+            $item = Item::with('Product')->findOrFail($itemId);
+            $colorsOfOtherItems = $item->product->items()->where('size_id',$item->size_id)->with('color')->get();
+            $otherSizesOfSameColor = Item::where('product_id', $item->product_id)->where('color_id', $item->color_id)->with('size')->get();
+            $randomProducts = Product::with('firstItem.media', 'colors')->where('id','!=',$item->product_id)->inRandomOrder()->take(4)->get();
+
+            
+            // return $item->getImageUrl();
+            return view('item-detail', compact('item','colorsOfOtherItems','otherSizesOfSameColor','randomProducts'));
+        }
         public function  paymentdetail()
         {
             return view('payment-details');
@@ -92,9 +107,5 @@ class PageController extends Controller
             return view('design-your-own');
         }
         
-    
-    
-    
-    
     
 }

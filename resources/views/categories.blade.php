@@ -1,47 +1,25 @@
 @extends('layouts.master')
-    @section('content')
-    <title> Category Cardigan </title>
-    <link rel="stylesheet" href="{{ asset('assets/Category/Cardigan.CSS')}}"/>
+
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('assets/CSS/Category Cardigan.CSS')}}"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+@endpush
 
+@section('title', 'categories')
 
+@section('content')
 
-        <!-- body 1 -->
+         <!-- body 1 -->
 
         <div id="div47">
-
+          @foreach ($categories as $category)
+            <a href="{{ route('categories', ['categoryId' => $category->id]) }}" id="gan">{{$category->name}}</a>
+          @endforeach
             
-            <a href="{{ asset('assets/HTML/Category Cardigan.html')}}" id="gan">Cardigan</a>
-            <a href="{{ asset('assets/HTML/Category Skirts.html')}}" id="skirt">Skirts</a>
-            <a href="{{ asset('assets/HTML/Category Dresses.html')}}" id="dre">Dresses</a>
-            <a href="{{ asset('assets/HTML/Category Hoodies.html')}}" id="hood">Hoodies</a>
-            <a href="{{ asset('assets/HTML/Category Blouses.html')}}" id="bl">Blouses</a>
-            <a href="{{ asset('assets/HTML/Category Sets.html')}}" id="set">Sets</a>
-            <a href="{{ asset('assets/HTML/Category Basics.html')}}" id="bas">Basics</a>
-            <a href="{{ asset('assets/HTML/Category Pants.html')}}" id="pan">Pants</a>
-            <a href="{{ asset('assets/HTML/Category Home Wear.html')}}" id="wear">Home Wear</a>
-            <a href="{{ asset('assets/HTML/Category Sale.html')}}" id="sale">Sale</a>
 
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -49,6 +27,11 @@
 
 
         <div class="row" id="div56">
+          @foreach($products as $product)
+          <x-product-card :product="$product"/>
+          @endforeach
+
+
             <div class="col-md-3">
 
                 <div class="card" id="div55">
@@ -81,16 +64,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
 
 
 

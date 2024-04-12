@@ -20,13 +20,16 @@
                     <h5> > </h5>
                     <h5> Cardigan </h5>
                     <h5> > </h5>
-                    <h5> Item Name </h5>
+                    
+                      <h5 >{{$item->product->name}}</h5>
+                    
+           
                 </div>
 
 
-                <h1 id="denim">Denim Trench</h1>
+                <h1 id="denim">{{$item->product->name}}</h1>
 
-                <h1 id="l60">600LE</h1>
+                <h1 id="l60">{{$item->price}}</h1>
 
 
                 <div id="div63">
@@ -37,25 +40,35 @@
                     <img src="{{ asset('assets/IMG/Star 5.png')}}">
                 </div>
 
-
-                <p id="color"> Color </p>
-                <img src="{{ asset('assets/IMG/الوان.png')}}" id="ph53">
-
+                <div id="div48">
+                  <p id="color"> Color </p>
+                  <br>
+                  @foreach($colorsOfOtherItems as $itemFromList)
+                      @if($itemFromList->id != $item->id)
+                        <a href="{{route('item-detail',$itemFromList->id)}}" id="div49" style="background-color: {{$itemFromList->color->hex}};"></a>
+                      @else
+                        <span  id="div49" style="background-color: {{$itemFromList->color->hex}}; border: 2px solid gold;width: 28px;height: 28px;border-radius: 50%;"></span>                      
+                      @endif
+                  @endforeach
+                </div>
 
                 <p id="size"> Size </p>
                 <div id="div64">
-                    <div id="div65">
-                        <h4 id="M">M</h4>
+                  @foreach($otherSizesOfSameColor as $otherItem)
+                    @if ($otherItem->id != $item->id)
+                    <div id="div65" style="width: 60px">
+                      <a style="color: unset" href="{{ route('item-detail', $otherItem->id) }}">
+                        <h4 id="M">{{ $otherItem->size->name }}</h4>
+                        </a>  
                     </div>
-                    <div id="div66">
-                        <h4 id="M">X</h4>
+     
+                    @else
+                    <div id="div65" style="border: 2px solid gold;width: 60px;color: gold;">
+                      <h4 id="M">{{ $otherItem->size->name }}</h4>
                     </div>
-                    <div id="div67">
-                        <h4 id="M">L</h4>
-                    </div>
-                    <div id="div68">
-                        <h4 id="M">XL</h4>
-                    </div>
+                    @endif
+
+                  @endforeach
                 </div>
 
                 <a  href="{{route('cart')}}">
@@ -72,16 +85,17 @@
 
             <div class="col-md-6">
 
-                <img src="{{ asset('assets/IMG/bb (1).png')}}" id="ph54">
+                {{-- <img src="{{ asset('assets/IMG/bb (1).png')}}" id="ph54"> --}}
+                <img src="{{ $item->getImageUrl()}}" id="ph54">
 
 
-                <div id="div69">
+                {{-- <div id="div69">
                     <img src="{{ asset('assets/IMG/bb (5).png')}}" id="ph55">
                     <img src="{{ asset('assets/IMG/bb (6).png')}}" id="ph55">
                     <img src="{{ asset('assets/IMG/bb (2).png')}}" id="ph55">
                     <img src="{{ asset('assets/IMG/bb (3).png')}}" id="ph55">
                     <img src="{{ asset('assets/IMG/bb (4).png')}}" id="ph55">
-                </div>
+                </div> --}}
 
             </div>
 
@@ -136,39 +150,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
-        
         
         <!-- body 3 -->
 
@@ -176,172 +157,35 @@
         <h1 id="sugg"> Suggestion </h1>
 
         <div class="row" id="div56">
-            <div class="col-md-3">
-
-                <div class="card" id="div55">
-                    <img src="{{ asset('assets/IMG/hh (1).png')}}" class="card-img-top" alt="..." id="ph50">
-                    <div class="card-body">
-                      <p class="card-title" id="pro">Product Name</p>
-        
-                      <div id="div48">
-                        <div id="div49"></div>
-                        <div id="div50"></div>
-                        <div id="div51"></div>
-                        <div id="div52"></div>
-                      </div>
-        
-                      <div id="div53">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                      </div>
-        
-        
-                      <div id="div54">
-                        <h3 id="l6">600LE</h3>
-                        <img src="{{ asset('assets/IMG/Vector.png')}}" id="ph48">
-                      </div>
-        
-        
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-            <div class="col-md-3">
-
-                <div class="card" id="div55">
-                    <img src="{{ asset('assets/IMG/hh (2).png')}}" class="card-img-top" alt="..." id="ph50">
-                    <div class="card-body">
-                      <p class="card-title" id="pro">Product Name</p>
-        
-                      <div id="div48">
-                        <div id="div49"></div>
-                        <div id="div50"></div>
-                        <div id="div51"></div>
-                        <div id="div52"></div>
-                      </div>
-        
-                      <div id="div53">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                      </div>
-        
-        
-                      <div id="div54">
-                        <h3 id="l6">600LE</h3>
-                        <img src="{{ asset('assets/IMG/Vector.png')}}" id="ph48">
-                      </div>
-        
-        
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="col-md-3">
-
-                <div class="card" id="div55">
-                    <img src="{{ asset('assets/IMG/hh (3).png')}}" class="card-img-top" alt="..." id="ph50">
-                    <div class="card-body">
-                      <p class="card-title" id="pro">Product Name</p>
-        
-                      <div id="div48">
-                        <div id="div49"></div>
-                        <div id="div50"></div>
-                        <div id="div51"></div>
-                        <div id="div52"></div>
-                      </div>
-        
-                      <div id="div53">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                      </div>
-        
-        
-                      <div id="div54">
-                        <h3 id="l6">600LE</h3>
-                        <img src="{{ asset('assets/IMG/Vector.png')}}" id="ph48">
-                      </div>
-        
-        
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            <div class="col-md-3">
-
-                <div class="card" id="div55">
-                    <img src="{{ asset('assets/IMG/hh (4).png')}}" class="card-img-top" alt="..." id="ph50">
-                    <div class="card-body">
-                      <p class="card-title" id="pro">Product Name</p>
-        
-                      <div id="div48">
-                        <div id="div49"></div>
-                        <div id="div50"></div>
-                        <div id="div51"></div>
-                        <div id="div52"></div>
-                      </div>
-        
-                      <div id="div53">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                        <img src="{{ asset('assets/IMG/Star 5.png')}}">
-                      </div>
-        
-        
-                      <div id="div54">
-                        <h3 id="l6">600LE</h3>
-                        <img src="{{ asset('assets/IMG/Vector.png')}}" id="ph48">
-                      </div>
-        
-        
-                    </div>
-                </div>
-            </div>
+          @foreach($randomProducts as $product)
+              <x-product-card :product="$product"/>
+          @endforeach
 
 
         </div>
 
+        @endsection
 
 
+        @push('scripts')
 
+        <script>
 
-
-
-
-      <script>
-        const plus = document.querySelector('.plus_minus'),
-        minus = document.querySelector('.minus_plus');
-
-      let number_el = document.querySelector('.number');
-
-      plus.addEventListener('click', () => {
-        let val = parseInt(number_el.innerText);
-        number_el.innerText = ++val;
-      });
-
-      minus.addEventListener('click', () => {
-        let val = parseInt(number_el.innerText);
-        number_el.innerText = --val;
-      });
-
-    @endsection
+          const plus = document.querySelector('.plus_minus'),
+          minus = document.querySelector('.minus_plus');
+          console.log(plus);
+  
+        let number_el = document.querySelector('.number');
+  
+        plus.addEventListener('click', () => {
+          let val = parseInt(number_el.innerText);
+          number_el.innerText = ++val;
+        });
+  
+        minus.addEventListener('click', () => {
+          let val = parseInt(number_el.innerText);
+          number_el.innerText = --val;
+        });
+  
+        </script>
+        @endpush

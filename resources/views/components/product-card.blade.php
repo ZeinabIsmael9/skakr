@@ -8,7 +8,6 @@
                 <div id="div48">
                     @foreach($product->colors->take(7) as $color)
                         <div id="div49" style="background-color: {{$color->hex}};"></div>
-
                     @endforeach
 {{--                    <div id="div49"></div>--}}
 {{--                    <div id="div50"></div>--}}

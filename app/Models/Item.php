@@ -37,7 +37,10 @@ class Item extends Model  implements HasMedia
     {
         return $this->getMedia('item_images');
     }
-
+    public function getImageUrl()
+    {
+        return $this->getMedia('item_images')->first()->original_url;
+    }
 
 
     public function registerMediaCollections(): void

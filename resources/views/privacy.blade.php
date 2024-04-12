@@ -246,7 +246,7 @@
         <br>
         <a href="{{ asset('assets/HTML/Category Cardigan.html') }}" id="z1">Categories</a>
         <br>
-        <a id="z1" href="{{ asset('assets/HTML/') }}">Shop</a>
+        <a id="z1" href="{{ asset('assets/HTML/shop') }}">Shop</a>
         <br>
         <a id="z1" href="{{ asset('assets/HTML/Contact.html') }}">Contact</a>
     </div>
@@ -255,7 +255,7 @@
         <br>
         <a href="{{ asset('assets/HTML/Privacy.html') }}" id="z2">Privacy</a>
         <br>
-        <a href="{{ asset('assets/HTML/Help.html') }}" id="z2">Help</a>
+        <a href="{{ asset('assets/HTML/help.html') }}" id="z2">Help</a>
     </div>
 
     <h4 id="social" class="font-weight-bold">Social</h4>

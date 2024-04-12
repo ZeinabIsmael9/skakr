@@ -68,21 +68,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script>
       const plus = document.querySelector('.plus_minus'),
       minus = document.querySelector('.minus_plus');
