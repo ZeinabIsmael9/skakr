@@ -44,7 +44,8 @@
         <a id="shop" href=" {{ route('shop') }}"> Shop </a>
         <a id="cont" href="{{ route('contact') }}"> Contact </a>
         <img src="{{ asset('assets/IMG/Property 1=Vector.png') }}" id="ph600">
-        <a id="log" href="{{ asset('assets/HTML/Login.html') }}"> Login </a>
+        <a id="log" href="{{ route('login') }}"> Login </a>
+        <a id="log" href="{{ route('register') }}"> Register </a>
 
     </div>
 

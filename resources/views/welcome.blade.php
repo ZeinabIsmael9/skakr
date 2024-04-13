@@ -289,13 +289,13 @@
                     
                     <div class="carousel-item">
                         <div class="row" id="row2">
-                            <a href="{{ asset('assets/HTML/Category Home Wear.html') }}">
+                            <a href="{{ asset('assets/HTML/Category Dashboard Wear.html') }}">
                                 <div class="col-md-3">
                                 
                                     <img src="{{ asset('assets/IMG/c (9).png') }}" id="ph22">
                                     <div id="div24">
                         
-                                        <p id="ho">Home Wear</p>
+                                        <p id="ho">Dashboard Wear</p>
                                         <img src="{{ asset('assets/IMG/icon.png') }}" id="icon1">
                                         
                                     </div>
