@@ -14,11 +14,11 @@
         <h1 id="piece" class="font-weight-bold">Create Your Piece</h1>
         <div id="div2">
 
-            <img src="../IMG/dress.png">
-            <img src="../IMG/panty.png" id="ph1">
-            <img src="../IMG/blouse.png"id="ph1">
-            <img src="../IMG/skirrt.png"id="ph1">
-            <img src="../IMG/jumpsuit.png"id="ph1">
+            <img src="{{ asset('assets/IMG/dress.png')}}">
+            <img src="{{ asset('assets/IMG/panty.png')}}" id="ph1">
+            <img src="{{ asset('assets/IMG/blouse.png')}}"id="ph1">
+            <img src="{{ asset('assets/IMG/skirrt.png')}}"id="ph1">
+            <img src="{{ asset('assets/IMG/jumpsuit.png')}}"id="ph1">
 
         </div>
 
