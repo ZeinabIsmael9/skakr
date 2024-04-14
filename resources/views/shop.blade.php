@@ -1,6 +1,11 @@
 @extends('layouts.master')
 @push('styles')
     <link rel="stylesheet" href="{{ asset('assets/CSS/New Collection.CSS')}}"/>
+{{--    <link rel="stylesheet" href="{{ asset('assets/CSS/Home.CSS') }}">--}}
+
+
+{{--    <link rel="stylesheet" href="{{ asset('assets/CSS/Login.CSS') }}"/>--}}
+
 @endpush
 @section('title', 'New Collection')
 

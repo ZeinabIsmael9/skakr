@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\PageController;
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,21 +30,26 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/', [PageController::class, 'index'])->name('index');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
-Route::get('/about', [PageController::class, 'about'])->name('about'); 
+Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/privacy', [PageController::class, 'privacy'])->name('privacy');
-Route::get('/help', [PageController::class, 'help'])->name('help'); 
+Route::get('/help', [PageController::class, 'help'])->name('help');
 Route::get('/user-terms', [PageController::class, 'userterms'])->name('user-terms');
 Route::get('/item-detail/{itemId}', [PageController::class, 'itemdetail'])->name('item-detail');
-Route::get('/cart', [PageController::class, 'cart'])->name('cart'); 
-Route::get('/shopping-cart', [PageController::class, 'shoppingcart'])->name('shopping-cart'); 
+Route::get('/cart', [PageController::class, 'cart'])->name('cart');
+Route::get('/shopping-cart', [PageController::class, 'shoppingcart'])->name('shopping-cart');
 Route::get('/categories/{categoryId}', [PageController::class, 'categories'])->name('categories');
-Route::get('/client-data', [PageController::class, 'clientdata'])->name('client-data'); 
-Route::get('/received', [PageController::class, 'received'])->name('received'); 
+Route::get('/client-data', [PageController::class, 'clientdata'])->name('client-data');
+Route::get('/received', [PageController::class, 'received'])->name('received');
 Route::get('/payment-details', [PageController::class, 'paymentdetail'])->name('payment-details');
-Route::get('/trending', [PageController::class, 'trending'])->name('trending'); 
-Route::get('/shop', [PageController::class, 'shop'])->name('shop'); 
-Route::get('/designyourown', [PageController::class, 'shop'])->name('design-your-own'); 
+Route::get('/trending', [PageController::class, 'trending'])->name('trending');
+Route::get('/shop', [PageController::class, 'shop'])->name('shop');
+Route::get('/designyourown', [PageController::class, 'shop'])->name('design-your-own');
+// Create Your Piece
+Route::get('/create-your-piece', [PageController::class, 'createYourPiece'])->name('create-your-piece');
+Route::get('/create-your-piece2', [PageController::class, 'createYourPiece2'])->name('create-your-piece2');
 
 
 
 require __DIR__.'/auth.php';
+
+?>

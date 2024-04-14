@@ -1,4 +1,4 @@
-#div1{
+#design #div1{
 
     width: 1190px;
     height: 605px;
@@ -10,7 +10,7 @@
 }
 
 
-#piece{
+#design #piece{
 
     text-align: center;
     font-size: 35px;
@@ -20,7 +20,7 @@
 }
 
 
-#div2{
+#design #div2{
 
     display: flex;
     margin: 70px 0 0 60px;
@@ -28,18 +28,18 @@
 }
 
 
-#ph1{
+#design #ph1{
 
     margin: 0 0 0 90px;
 }
 
-#div3{
+#design #div3{
 
     display: flex;
     margin: 25px 0 0 0;
 }
 
-#dre{
+#design #dre{
 
     font-size: 27px;
     margin: 0 0 0 91px;
@@ -48,42 +48,42 @@
 }
 
 
-#pant{
+#design #pant{
 
     font-size: 27px;
     margin: 0 0 0 150px;
     color: black;
-    
+
 }
 
-#pant1{
+#design #pant1{
 
     font-size: 27px;
     margin: 0 0 0 151px;
     color: black;
-    
+
 }
 
 
-#pant2{
+#design #pant2{
 
     font-size: 27px;
     margin: 0 0 0 210px;
     color: black;
-    
+
 }
 
 
-#pant3{
+#design #pant3{
 
     font-size: 27px;
     margin: 0 0 0 164px;
     color: black;
-    
+
 }
 
 
-#vd{
+#design #vd{
 
     color: white;
     background-color: #DB8383;

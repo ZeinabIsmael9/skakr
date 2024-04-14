@@ -1,0 +1,88 @@
+/*nav*/
+
+nav#div1{
+
+    width: 1519px;
+    height: 65px;
+    background-color: #FFE3E3;
+    display: flex;
+    box-shadow: 0px 3px 10px -7px rgb(0, 0, 0);
+
+}
+
+#ph1{
+
+    height: 62px;
+    width: 130px;
+    margin: 3px 0 0 0;
+
+}
+
+#home{
+
+    color: #DB7575;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 360px;
+}
+
+#cate{
+
+    color: white;
+    border: none;
+    font-size: 20px;
+    background: none;
+    font-family: Kadwa;
+    margin: 9px 0 0 85px;
+}
+
+#own{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#shop{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#cont{
+
+    color: white;
+    font-size: 20px;
+    font-family: Kadwa;
+    margin: 18px 0 0 85px;
+}
+
+#ph600{
+
+    width: 33px;
+    height: 30px;
+    margin: 17px 0 0 105px;
+
+}
+
+#log{
+    background: none;
+    color: white;
+    border: 1px solid white;
+    width: 55px;
+    height: 40px;
+    font-family: Kadwa;
+    margin: 10px 0 0 40px;
+    padding: 7px 0 0 6px;
+}
+
+#car{
+    font-family: sans-serif;
+}
+#car:hover{
+    background-color: #FFE3E3;
+}
+
