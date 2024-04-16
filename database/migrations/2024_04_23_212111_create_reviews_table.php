@@ -1,10 +1,9 @@
-<?php
-
+,<?php
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateReviewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,11 +13,13 @@ return new class extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
-            $table->foreignId('product_id')->constrained()->onDelete('cascade')->onUpdate('cascade'); // Fixed field name here
+            $table->foreignId('product_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->text('comment');
+            // $table->string('email');
             $table->unsignedSmallInteger('rating')->default(5);
             $table->timestamps();
         });
+        
     }
 
     /**
@@ -28,4 +29,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('reviews');
     }
-};
+}

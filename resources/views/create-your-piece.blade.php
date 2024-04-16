@@ -33,7 +33,7 @@
 
         </div>
 
-        <a href="../HTML/Design Your Own 2.html">
+        <a href="{{route('create-your-piece2')}}">
 
             <button id="vd">Let’s Start</button>
 

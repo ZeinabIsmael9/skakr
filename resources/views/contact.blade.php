@@ -11,16 +11,19 @@
         <!-- body 1 -->
         <h1 id="get">lET’S GET IN <span style="display: block;"></span> TOUCH</h1>
         <p id="love">We would love to hear from you! If you have any <span style="display: block;"></span>questions, comments, or feedback, please don't hesitate to <span style="display: block;"></span> get in touch with us. <span style="display: block;"></span> Our team is here to assist you and provide the <span style="display: block;"></span> information you need</p>
-        <input type="text" placeholder="Name" id="name">
-        <br>
-        <input type="email" placeholder="Email" id="email">
-        <br>
-        <input type="number" placeholder="Phone Number" id="num">
-        <br>
+        <form method="POST" action="{{ route('contact.post') }}">
+            @csrf
+            <input type="text" placeholder="Name" id="name" name="name">
+            <br>
+            <input type="email" placeholder="Email" id="email" name="email">
+            <br>
+            <input type="number" placeholder="Phone Number" id="num" name="num">
+            <br>
         <div id="div2">
-            <input type="text" placeholder="How We Can Help!" id="text">
+            <input type="text" placeholder="How We Can Help!" id="text" name="text">
 
-            <button id="vd">SEND</button>
+            <button type="submit" id="vd">SEND</button>
         </div>
+        </form>
         <img src="{{ asset('assets/IMG/Group 70.png')}}" id="ph2">
         @endsection

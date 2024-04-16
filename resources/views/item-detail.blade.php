@@ -117,37 +117,33 @@
 
         
         <div id="div72">
-            <h5 id="share">Share Your Review</h5>
-            <h5 id="rate">Rate*</h5>
+          <h5 id="share">Share Your Review</h5>
+          <h5 id="rate">Rate*</h5>
+          <form method="POST" action="{{ route('item-detail.save-review', ['itemId' => $item->id]) }}">
+            @csrf
             <img src="{{ asset('assets/IMG/Group 62.png')}}" id="ph56">
             <br>
             <label id="revi" class="font-weight-bold">Review</label>
             <br>
-            <input type="text" id="rev">
+            <input type="text" id="rev" name="review">
             <br>
-
             <div id="div73">
                 <div id="div74">
-
                     <label id="name" class="font-weight-bold">Name</label>
                     <br>
-                    <input type="text" id="text">
-
+                    <input type="text" id="name" name="name">
                 </div>
-
-                <div id="div75">
-
+                {{-- <div id="div75">
                     <label id="em" class="font-weight-bold">Email</label>
                     <br>
-                    <input type="email" id="email">
-
-                </div>
+                    <input type="email" id="email" name="email">
+                </div> --}}
             </div>
-
-            <button id="vd">Share</button>
-
-        </div>
-
+            <button id="vd" type="submit">Share</button>
+        </form>
+        
+      </div>
+      
 
 
         

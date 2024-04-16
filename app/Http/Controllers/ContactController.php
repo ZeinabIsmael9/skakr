@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Review;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
-
-class ReviewController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,7 +34,7 @@ class ReviewController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Review $review)
+    public function show(Contact $contact)
     {
         //
     }
@@ -43,7 +42,7 @@ class ReviewController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Review $review)
+    public function edit(Contact $contact)
     {
         //
     }
@@ -51,7 +50,7 @@ class ReviewController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Review $review)
+    public function update(Request $request, Contact $contact)
     {
         //
     }
@@ -59,7 +58,7 @@ class ReviewController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Review $review)
+    public function destroy(Contact $contact)
     {
         //
     }
