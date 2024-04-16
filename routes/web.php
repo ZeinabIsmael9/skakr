@@ -24,6 +24,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/dashboard2', function () {
+    return view('dashboard2');
+
+})->middleware(['auth', 'verified'])->name('dashboard');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -35,7 +40,7 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/privacy', [PageController::class, 'privacy'])->name('privacy');
 Route::get('/help', [PageController::class, 'help'])->name('help');
 Route::get('/user-terms', [PageController::class, 'userterms'])->name('user-terms');
-//Route::get('/item-detail/{itemId}', [PageController::class, 'itemdetail'])->name('item-detail');
+Route::get('/item-detail/{itemId}', [PageController::class, 'itemdetail'])->name('item-detail');
 Route::get('/cart', [PageController::class, 'cart'])->name('cart');
 Route::get('/shopping-cart', [PageController::class, 'shoppingcart'])->name('shopping-cart');
 Route::get('/categories/{categoryId}', [PageController::class, 'categories'])->name('categories');
@@ -48,9 +53,8 @@ Route::get('/designyourown', [PageController::class, 'shop'])->name('design-your
 // Create Your Piece
 Route::get('/create-your-piece', [PageController::class, 'createYourPiece'])->name('create-your-piece');
 Route::get('/create-your-piece2', [PageController::class, 'createYourPiece2'])->name('create-your-piece2');
-Route::get('/item-detail/{itemId}', [PageController::class, 'itemdetail'])->name('item-detail');
-Route::post('/item-detail/{itemId}/save-review', [PageController::class, 'saveReview'])->name('item-detail.save-review');
 
+Route::post('/item-detail/{itemId}/save-review', [PageController::class, 'saveReview'])->name('item-detail.save-review');
 Route::post('/contact', [PageController::class, 'contact'])->name('contact.post');
 
 require __DIR__.'/auth.php';
