@@ -18,7 +18,6 @@ return new class extends Migration
             $table->decimal('sub_total')->unsigned()->comment('before calculating discount');
             $table->decimal('total')->unsigned()->comment('after calculating discount');
             $table->decimal('paid')->nullable();
-
             $table->foreignId('user_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });

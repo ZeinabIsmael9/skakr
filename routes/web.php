@@ -16,6 +16,7 @@ use App\Http\Controllers\ReviewController;
 |
 */
 
+//dashboard routes
 Route::get('/', function () {
     return view('welcome');
 });
@@ -25,9 +26,30 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/dashboard2', function () {
-    return view('dashboard2');
-
+    return view('dashboard.pages.dashboard2');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/tables', function () {
+    return view('dashboard.pages.tables');
+})->middleware(['auth', 'verified'])->name('tables');
+
+Route::get('/billing',function(){
+    return view('dashboard.pages.billing');
+})->middleware(['auth', 'verified'])->name('billing');
+
+Route::get('/virtual-reality',function(){
+    return view('dashboard.pages.virtual-reality');
+})->middleware(['auth', 'verified'])->name('virtual-reality');
+
+Route::get('/rtl',function(){
+    return view('dashboard.pages.rtl');
+})->middleware(['auth', 'verified'])->name('rtl');
+
+Route::get('/profile',function(){
+    return view('dashboard.pages.profile');
+})->middleware(['auth', 'verified'])->name('profile');
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
