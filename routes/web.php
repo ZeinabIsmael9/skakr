@@ -62,7 +62,7 @@ Route::get('/add-item-to-cart/{itemId}', [\App\Http\Controllers\CartController::
 Route::get('/subtract-item-from-cart/{itemId}', [\App\Http\Controllers\CartController::class, 'subtract'])->name('subtract-item-from-cart');
 
 Route::post('/order', [\App\Http\Controllers\OrderController::class, 'store'])->name('order');
-Route::post('/order', [\App\Http\Controllers\OrderController::class, 'storeCutom'])->name('order-cutom');
+Route::post('/order-cutom', [\App\Http\Controllers\OrderController::class, 'storeCutom'])->name('order-cutom');
 require __DIR__.'/auth.php';
 
 ?>

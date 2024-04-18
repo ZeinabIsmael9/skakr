@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\Contact;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Cart;
 
 class PageController extends Controller
 {
