@@ -52,8 +52,8 @@ Route::get('/trending', [PageController::class, 'trending'])->name('trending');
 Route::get('/shop', [PageController::class, 'shop'])->name('shop');
 Route::get('/designyourown', [PageController::class, 'shop'])->name('design-your-own');
 // Create Your Piece
-Route::get('/create-your-piece', [PageController::class, 'createYourPiece'])->name('create-your-piece');
-Route::get('/create-your-piece2', [PageController::class, 'createYourPiece2'])->name('create-your-piece2');
+Route::get('/create-your-piece', [PageController::class, 'createYourPiece2'])->name('create-your-piece');
+//Route::get('/create-your-piece2', [PageController::class, 'createYourPiece2'])->name('create-your-piece2');
 
 Route::post('/item-detail/{itemId}/save-review', [PageController::class, 'saveReview'])->name('item-detail.save-review');
 Route::post('/contact', [PageController::class, 'contact'])->name('contact.post');
