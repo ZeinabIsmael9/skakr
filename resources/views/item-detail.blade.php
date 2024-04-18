@@ -1,6 +1,6 @@
 @extends('layouts.master')
     @section('content')
-        
+
     <title> Item Detail </title>
         <link rel="stylesheet" href="{{ asset('assets/CSS/Item Detail.CSS')}}"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -20,10 +20,10 @@
                     <h5> > </h5>
                     <h5> Cardigan </h5>
                     <h5> > </h5>
-                    
+
                       <h5 >{{$item->product->name}}</h5>
-                    
-           
+
+
                 </div>
 
 
@@ -47,7 +47,7 @@
                       @if($itemFromList->id != $item->id)
                         <a href="{{route('item-detail',$itemFromList->id)}}" id="div49" style="background-color: {{$itemFromList->color->hex}};"></a>
                       @else
-                        <span  id="div49" style="background-color: {{$itemFromList->color->hex}}; border: 2px solid gold;width: 28px;height: 28px;border-radius: 50%;"></span>                      
+                        <span  id="div49" style="background-color: {{$itemFromList->color->hex}}; border: 2px solid gold;width: 28px;height: 28px;border-radius: 50%;"></span>
                       @endif
                   @endforeach
                 </div>
@@ -59,9 +59,9 @@
                     <div id="div65" style="width: 60px">
                       <a style="color: unset" href="{{ route('item-detail', $otherItem->id) }}">
                         <h4 id="M">{{ $otherItem->size->name }}</h4>
-                        </a>  
+                        </a>
                     </div>
-     
+
                     @else
                     <div id="div65" style="border: 2px solid gold;width: 60px;color: gold;">
                       <h4 id="M">{{ $otherItem->size->name }}</h4>
@@ -71,15 +71,17 @@
                   @endforeach
                 </div>
 
-                <a  href="{{route('cart')}}">
 
-                  <button id="login">Add To Bag</button>
+{{--                  <a class="btn" href="{{route('add-item-to-cart',$item->id)}}" id="login">Add To Bag</a>--}}
+                <form method="GET" action="{{ route('add-item-to-cart', $item->id) }}">
+                    @csrf
+                    <button type="submit" class="btn" id="login">Add To Bag</button>
+                    <button class="plus_minus btn" id="table">+</button>
+                    <input name="quantity" type="" class="number btn" id="tablee" value="1" min="1" style="width: 50px;">
+                    <button class="minus_plus btn" id="table">-</button>
+                </form>
 
-                </a>
-                
-                <button class="plus_minus btn" id="table">+</button>
-                <span class="number btn" id="tablee">1</span>
-                <button class="minus_plus btn" id="table">-</button>
+
 
             </div>
 
@@ -102,7 +104,7 @@
         </div>
 
         <div id="div70"></div>
-        
+
 
 
         <!-- body 2-->
@@ -115,7 +117,7 @@
 
         </div>
 
-        
+
         <div id="div72">
           <h5 id="share">Share Your Review</h5>
           <h5 id="rate">Rate*</h5>
@@ -146,7 +148,7 @@
       
 
 
-        
+
         <!-- body 3 -->
 
 
@@ -165,23 +167,23 @@
 
         @push('scripts')
 
-        <script>
+            <script>
+                const plus = document.querySelector('.plus_minus'),
+                    minus = document.querySelector('.minus_plus'),
+                    number_el = document.querySelector('.number');
 
-          const plus = document.querySelector('.plus_minus'),
-          minus = document.querySelector('.minus_plus');
-          console.log(plus);
-  
-        let number_el = document.querySelector('.number');
-  
-        plus.addEventListener('click', () => {
-          let val = parseInt(number_el.innerText);
-          number_el.innerText = ++val;
-        });
-  
-        minus.addEventListener('click', () => {
-          let val = parseInt(number_el.innerText);
-          number_el.innerText = --val;
-        });
-  
-        </script>
+                plus.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    let val = parseInt(number_el.value);
+                    number_el.value = ++val;
+                });
+
+                minus.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    let val = parseInt(number_el.value);
+                    if(val > 1) { // Prevent the value from going below 1
+                        number_el.value = --val;
+                    }
+                });
+            </script>
         @endpush

@@ -34,6 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
 Route::get('/', [PageController::class, 'index'])->name('index');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/about', [PageController::class, 'about'])->name('about');
@@ -57,6 +58,11 @@ Route::get('/create-your-piece2', [PageController::class, 'createYourPiece2'])->
 Route::post('/item-detail/{itemId}/save-review', [PageController::class, 'saveReview'])->name('item-detail.save-review');
 Route::post('/contact', [PageController::class, 'contact'])->name('contact.post');
 
+Route::get('/add-item-to-cart/{itemId}', [\App\Http\Controllers\CartController::class, 'store'])->name('add-item-to-cart');
+Route::get('/subtract-item-from-cart/{itemId}', [\App\Http\Controllers\CartController::class, 'subtract'])->name('subtract-item-from-cart');
+
+Route::post('/order', [\App\Http\Controllers\OrderController::class, 'store'])->name('order');
+Route::post('/order', [\App\Http\Controllers\OrderController::class, 'storeCutom'])->name('order-cutom');
 require __DIR__.'/auth.php';
 
 ?>

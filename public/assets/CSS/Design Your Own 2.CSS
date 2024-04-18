@@ -1,7 +1,19 @@
+input[type="radio"] {
+    width: 15px; height: 15px;
+    accent-color: #DB8383;
+    color: #DB8383;
+    /*background-color: #DB8383;*/
+    /*opacity: 0.3;*/
+    border: 1px solid #DB8383;
+}
+input[type="radio"]:checked {
+    opacity: 0.5;
+}
+
 /*nav*/
 
 #div1{
-
+    /**/
     width: 1519px;
     height: 65px;
     background-color: #FFE3E3;
@@ -70,7 +82,7 @@
 }
 
 #ph46{
-    
+
     width: 35px;
     height:35px;
     margin: 14px 0 0 47px;
@@ -81,7 +93,7 @@
     width: 14px;
     height: 14px;
     margin: 37px 0 0 -9px;
-    
+
 }
 
 #car{
@@ -140,7 +152,7 @@
     width: 400px;
     height: 500px;
     border: none;
-    box-shadow: 0 0 10px 5px #FFE3E3; 
+    box-shadow: 0 0 10px 5px #FFE3E3;
     border-radius: 20px;
     margin: 90px 0 0 100px;
 }
@@ -425,7 +437,7 @@
     color: #E19FAE;
     font-size: 22px;
     margin: 11px 0 0 16px;
-    
+
 }
 
 
@@ -436,7 +448,7 @@
     border: 1px solid #DB8383;
     border-radius: 5px;
     margin: 0 0 0 -190px;
-    
+
 }
 
 
@@ -563,7 +575,7 @@
     color: #E19FAE;
     font-size: 22px;
     margin: 11px 0 0 16px;
-    
+
 }
 
 
@@ -574,7 +586,7 @@
     border: 1px solid #DB8383;
     border-radius: 5px;
     margin: 0 0 0 260px;
-    
+
 }
 
 

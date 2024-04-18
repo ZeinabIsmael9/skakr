@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -26,11 +27,41 @@ class CartController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request,$itemId)
     {
-        //
+//        return $request->all();
+        $user_id = User::first()->id;
+//        $user_id = $request->user()->id;
+       $quantity = $request->quantity??1;
+        if ($cart = Cart::where('item_id', $itemId)->where('user_id', $user_id)->first()) {
+            $cart->quantity = $cart->quantity + $quantity;
+
+        }else{
+            $cart = new Cart();
+            $cart->item_id = $itemId;
+            $cart->quantity = $quantity;
+            $cart->user_id = $user_id;
+        }
+
+        $cart->save();
+//        return $cart;
+
+        return redirect()->route('shopping-cart');
     }
 
+    public  function subtract(Request $request,$itemId){
+        $user_id = User::first()->id;
+        $quantity = $request->quantity??1;
+        if ($cart = Cart::where('item_id', $itemId)->where('user_id', $user_id)->first()) {
+            $cart->quantity = $cart->quantity - $quantity;
+            if ($cart->quantity <= 0){
+                $cart->delete();
+            }else{
+                $cart->save();
+            }
+        }
+        return redirect()->route('shopping-cart');
+    }
     /**
      * Display the specified resource.
      */

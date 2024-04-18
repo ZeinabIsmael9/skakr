@@ -1,6 +1,7 @@
 
-    <div class="col-md-3">
+    <div class="col-md-3 mt-5" >
         <div class="card" id="div55">
+            <a href="{{route('item-detail',$product->id)}}" style="color: unset;text-decoration:none">
             <img src="{{ asset($product->firstItem->media->first()->getUrl())}}" class="card-img-top" alt="..." id="ph50">
             <div class="card-body">
                 <p class="card-title" id="pro">{{$product->name}}</p>
@@ -29,11 +30,12 @@
 
 
                 <div id="div54">
-                    <h3 id="l6">{{$product->firstItem->price}} LE</h3>
+                    <h3 id="l6">{{round($product->firstItem->price)}}LE</h3>
                     <img src="{{ asset('assets/IMG/Vector.png')}}" id="ph48">
                 </div>
 
 
             </div>
+            </a>
         </div>
     </div>
