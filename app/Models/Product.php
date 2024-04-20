@@ -9,6 +9,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class Product extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 
     public function items()
     {

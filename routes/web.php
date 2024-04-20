@@ -21,13 +21,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
+Route::get('/dashboard1', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/dashboard2', function () {
     return view('dashboard.pages.dashboard2');
-})->middleware(['auth', 'verified'])->name('dashboard');
+});
+//    ->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/tables', function () {
     return view('dashboard.pages.tables');
@@ -86,5 +87,6 @@ Route::get('/subtract-item-from-cart/{itemId}', [\App\Http\Controllers\CartContr
 Route::post('/order', [\App\Http\Controllers\OrderController::class, 'store'])->name('order');
 Route::post('/order-cutom', [\App\Http\Controllers\OrderController::class, 'storeCutom'])->name('order-cutom');
 require __DIR__.'/auth.php';
-
+require __DIR__ . '/dashboard/auth.php';
+require __DIR__ . '/dashboard/web.php';
 ?>

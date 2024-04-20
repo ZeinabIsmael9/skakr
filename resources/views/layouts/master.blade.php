@@ -38,7 +38,10 @@
                 </a>
 
                 <div class="dropdown-menu">
+                    @foreach(\App\Models\Category::all() as $category)
+                        <a class="dropdown-item" href="{{ route('categories', ['categoryId' => $category->id]) }}" id="car">{{ $category->name }}</a>
 
+                    @endforeach
                   <a class="dropdown-item" href="{{ route('categories', ['categoryId' => 2]) }}" id="car">Cardigan</a>
                   <a class="dropdown-item" href="{{ route('categories', ['categoryId' => 1]) }}" id="car">Skirts</a>
                   <a class="dropdown-item" href="{{ route('categories', ['categoryId' => 2]) }}" id="car">Dresses</a>

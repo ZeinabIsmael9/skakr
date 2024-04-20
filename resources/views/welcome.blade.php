@@ -294,7 +294,7 @@
 
                     <div class="carousel-item">
                         <div class="row" id="row2">
-                            <a href="{{ asset('assets/HTML/Category Dashboard Wear.html') }}">
+                            <a href="{{ asset('assets/HTML/Category dashboard Wear.html') }}">
                                 <div class="col-md-3">
 
                                     <img src="{{ asset('assets/IMG/c (9).png') }}" id="ph22">

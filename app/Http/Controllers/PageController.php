@@ -39,11 +39,11 @@ class PageController extends Controller
             }
         }
         $subTotal = 0;
-        if ($selectedDesign && $sizekey){
+        if ($selectedDesign && $sizekey) {
 
-            $subTotal += $selectedDesign[$sizekey=='regular'?'priceSize1':'priceSize2'];
+            $subTotal += $selectedDesign[$sizekey == 'regular' ? 'priceSize1' : 'priceSize2'];
         }
-        if ($materialKey){
+        if ($materialKey) {
             $subTotal += 60;
         }
 
@@ -53,7 +53,7 @@ class PageController extends Controller
 
 
 //        $subTotal = 300;
-        return view('create-your-piece2', compact('designs', 'selectedDesign','designKey','materialKey','sizekey','subTotal','shipping','discount','total'));
+        return view('create-your-piece2', compact('designs', 'selectedDesign', 'designKey', 'materialKey', 'sizekey', 'subTotal', 'shipping', 'discount', 'total'));
     }
 
     public function index()
@@ -82,7 +82,8 @@ class PageController extends Controller
 //                return  \request()->is('*/2');
         $products = Product::where('category_id', $categoryId)
             ->with('firstItem.media', 'colors')
-            ->get();
+            ->whereHas('items')
+            ->orderBy('id', 'desc')->get();
         $categories = Category::all();
         //return $categories;
         return view('categories', compact('products', 'categories'));
@@ -132,7 +133,8 @@ class PageController extends Controller
     public function shop()
     {
 
-        $products = Product::with('firstItem.media', 'colors')->get();
+        $products = Product::with('firstItem.media', 'colors')->whereHas('items')->orderBy('id', 'desc')->get();
+
         return view('shop', compact('products'));
     }
 

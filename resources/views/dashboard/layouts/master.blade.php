@@ -1,6 +1,6 @@
 @include('dashboard.layouts.header')
 
-@include('dashboard.layouts.nav');
+@include('dashboard.layouts.nav')
 
 
 
@@ -12,10 +12,10 @@
 
 
 
-@include('dashboard.layouts.sidebar');
+@include('dashboard.layouts.sidebar')
 
 
 
 
 
-@include('dashboard.layouts.footer');
+@include('dashboard.layouts.footer')
