@@ -4,7 +4,7 @@ use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReviewController;
-
+use App\Http\Controllers\ClientController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -68,8 +68,8 @@ Route::get('/item-detail/{itemId}', [PageController::class, 'itemdetail'])->name
 Route::get('/cart', [PageController::class, 'cart'])->name('cart');
 Route::get('/shopping-cart', [PageController::class, 'shoppingcart'])->name('shopping-cart');
 Route::get('/categories/{categoryId}', [PageController::class, 'categories'])->name('categories');
-Route::get('/client-data', [PageController::class, 'clientdata'])->name('client-data');
-Route::get('/received', [PageController::class, 'received'])->name('received');
+Route::get('/client-data/{orderId}', [PageController::class, 'clientdata'])->name('client-data');
+Route::get('/received/{orderId}', [PageController::class, 'received'])->name('received');
 Route::get('/payment-details', [PageController::class, 'paymentdetail'])->name('payment-details');
 Route::get('/trending', [PageController::class, 'trending'])->name('trending');
 Route::get('/shop', [PageController::class, 'shop'])->name('shop');
@@ -80,6 +80,10 @@ Route::get('/create-your-piece', [PageController::class, 'createYourPiece2'])->n
 
 Route::post('/item-detail/{itemId}/save-review', [PageController::class, 'saveReview'])->name('item-detail.save-review');
 Route::post('/contact', [PageController::class, 'contact'])->name('contact.post');
+// Route::post('/client-data', [PageController::class, 'clientdata'])->name('client-data');
+
+Route::get('/client-data', [PageController::class, 'showForm'])->name('client-data');
+Route::post('/client-data', [PageController::class, 'clientdata']);
 
 Route::get('/add-item-to-cart/{itemId}', [\App\Http\Controllers\CartController::class, 'store'])->name('add-item-to-cart');
 Route::get('/subtract-item-from-cart/{itemId}', [\App\Http\Controllers\CartController::class, 'subtract'])->name('subtract-item-from-cart');

@@ -517,14 +517,29 @@
     padding: 100px 0 0 40px;
 
 }
-
-#div23{
-
+#div23 {
     height: 355px;
     background-color: #DB7575;
     width: 255px;
+    position: relative;
     margin: 100px 0 0 0;
+}
 
+#div23 p,
+#div23 h4,
+#div23 a {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+}
+
+#add {
+    background-color: #fff;
+    color: #DB7575;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
 }
 
 #ph21{

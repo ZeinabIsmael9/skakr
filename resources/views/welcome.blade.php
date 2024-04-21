@@ -129,191 +129,62 @@
             </div>
         </div>
 
+<!-- body 5 -->
 
-
-        <!-- body 5 -->
         <div id="div22">
 
-            <div id="div1000">
-                <h1 id="arr">New Arrival</h1>
-                <a id="se" href="{{route('shop')}}">See All</a>
-            </div>
-
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row" id="row1">
-                            <div class="col-md-3">
-                                <div id="div23">
-                                    <p id="pro">Product Name</p>
-                                    <h4 id="le">600LE</h4>
-                                    <button id="add">Add To Bag</button>
-                                </div>
-                                <img src="{{ asset('assets/IMG/i (1).png') }}" id="ph21">
+                    <div id="div1000">
+                        <h1 id="arr">New Arrival</h1>
+                        <a id="se" href="{{route('shop')}}">See All</a>
+        </div>        
+            
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row" id="row1">
+                    <div class="row">
+                        @foreach($randomProducts as $product)
+                        <div class="col-md-3">
+                            <div id="div23">
+                                <p id="pro">{{ $product->name }}</p>
+                                <h4 id="le">{{ round($product->firstItem->price) }}LE</h4>
+                                <a href="{{ route('item-detail', $product->id) }}" id="add">Add To Bag</a>
                             </div>
-
-                            <div class="col-md-3">
-                                <div id="div23">
-                                    <p id="pro">Product Name</p>
-                                    <h4 id="le">600LE</h4>
-                                    <button id="add">Add To Bag</button>
-                                </div>
-                                <img src="{{ asset('assets/IMG/i (2).png') }}" id="ph21">
-                            </div>
-
-                            <div class="col-md-3">
-                                <div id="div23">
-                                    <p id="pro">Product Name</p>
-                                    <h4 id="le">600LE</h4>
-                                    <button id="add">Add To Bag</button>
-                                </div>
-                                <img src="{{ asset('assets/IMG/i (3).png') }}" id="ph21">
-                            </div>
-
-                            <div class="col-md-3">
-                                <div id="div23">
-                                    <p id="pro">Product Name</p>
-                                    <h4 id="le">600LE</h4>
-                                    <button id="add">Add To Bag</button>
-                                </div>
-                                <img src="{{ asset('assets/IMG/i (4).png') }}" id="ph21">
-                            </div>
+                            <img src="{{ asset($product->firstItem->media->first()->getUrl()) }}" id="ph21">
                         </div>
+                        @endforeach
+                    </div>
+                    
                     </div>
 
-                    <div class="carousel-item">
-                        <div class="row" id="row1">
-                            <div class="col-md-3">
-                                <div id="div23">
-                                    <p id="pro">Product Name</p>
-                                    <h4 id="le">600LE</h4>
-                                    <button id="add">Add To Bag</button>
-                                </div>
-                                <img src="{{ asset('assets/IMG/i (5).png') }}" id="ph21">
-                            </div>
-
-                            <div class="col-md-3">
-                                <div id="div23">
-                                    <p id="pro">Product Name</p>
-                                    <h4 id="le">600LE</h4>
-                                    <button id="add">Add To Bag</button>
-                                </div>
-                                <img src="{{ asset('assets/IMG/z (1).png') }}" id="ph21">
-                            </div>
-
-
-
-
-
-
-                            <!-- body 6 -->
-
-        <div id="div700">
-            <h4 id="categories"> Categories </h4>
-
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row" id="row2">
-                            <a href="{{ asset('assets/HTML/Category Hoodies.html') }}">
-                                <div class="col-md-3">
-                                    <img src="{{ asset('assets/IMG/c (1).png') }}" id="ph22">
-                                    <div id="div24">
-                                        <p id="ho">Hoodies</p>
-                                        <img src="{{ asset('assets/IMG/icon.png') }}" id="icon1">
-                                    </div>
-                                </div>
+                    
+<!-- body 6 -->
+        <!-- Display Categories -->
+<div id="div700">
+    <h4 id="categories">Categories</h4>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row" id="row2">
+                    @foreach($categories as $category)
+                    <div class="col-md-3">
+                        <div id="div24">
+                            <a href="{{ route('categories', $category->id) }}" id="category-link">
+                                <p id="ho">{{ $category->name }}</p>
                             </a>
                         </div>
+                        <a href="{{ route('categories', $category->id) }}">
+                            <img src="{{ $category->image }}" id="ph22">
+                        </a>
                     </div>
-
+                    @endforeach
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-            <div class="carousel-item">
-                <div class="row" id="row2">
-                    <a href="{{ asset('assets/HTML/Category Basics.html') }}">
-                        <div class="col-md-3">
-                            <img src="{{ asset('assets/IMG/c (5).png') }}" id="ph22">
-                            <div id="div24">
-                                <p id="ho">Basics</p>
-                                <img src="{{ asset('assets/IMG/icon.png') }}" id="icon1">
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="{{ asset('assets/HTML/Category Pants.html') }}">
-                        <div class="col-md-3">
-                            <img src="{{ asset('assets/IMG/c (6).png') }}" id="ph22">
-                            <div id="div24">
-                                <p id="ho">Pants</p>
-                                <img src="{{ asset('assets/IMG/icon.png') }}" id="icon1">
-                            </div>
-                        </div>
-                    </a>
-
-
-                    <div class="carousel-item active">
-
-                        <div class="row" id="row2">
-
-                            <a href="{{ asset('assets/HTML/Category Skirts.html') }}">
-                                <div class="col-md-3">
-
-                                    <img src="{{ asset('assets/IMG/c (7).png') }}" id="ph22">
-                                    <div id="div24">
-
-
-                                        <p id="ho">Skirts</p>
-                                        <img src="{{ asset('assets/IMG/icon.png') }}" id="icon1">
-
-                                    </div>
-
-                                </div>
-                            </a>
-
-
-                            <a href="{{ asset('assets/HTML/Category Cardigan.html') }}">
-                                <div class="col-md-3">
-
-                                    <img src="{{ asset('assets/IMG/c (8).png') }}" id="ph22">
-                                    <div id="div24">
-
-
-                                        <p id="ho">Cardigan</p>
-                                        <img src="{{ asset('assets/IMG/icon.png') }}" id="icon1">
-
-                                    </div>
-
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="row" id="row2">
-                            <a href="{{ asset('assets/HTML/Category dashboard Wear.html') }}">
-                                <div class="col-md-3">
-
-                                    <img src="{{ asset('assets/IMG/c (9).png') }}" id="ph22">
-                                    <div id="div24">
-
-                                        <p id="ho">Dashboard Wear</p>
-                                        <img src="{{ asset('assets/IMG/icon.png') }}" id="icon1">
-
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
-
-            </div>
-        </div>
-        </div>
-
+                            
+        
+        
         @endsection
