@@ -9,45 +9,59 @@
     </script>
 
     <!-- body 1 -->
-    <form action="{{ route('client-data') }}" method="post">
+    <!-- form.blade.php -->
+    
+    <div id="div3">
+        <h1 id="che"> Confirm Order & Checkout </h1>
+    <form action="{{ route('client-data.store') }}" method="post">
         @csrf
-        <input type="text" placeholder="Full Name" name="full_name" required>
-        <input type="text" placeholder="Country" name="country">
+        <input type="text" placeholder="Full Name" name="full_name" id="full" required>
+        <input type="text" placeholder="Country" name="country" id="coun">
         <br>
-        <input type="text" placeholder="Address" name="address">
+        <input type="text" placeholder="Address" name="address"  id="add">
         <br>
-        <div>
-            <input type="text" placeholder="Street Name & House Number" name="street">
-            <input type="text" placeholder="City" name="city">
+        <div id="div2">
+            <input type="text" placeholder="Street Name & House Number" id="street">
+
+            <div class="dropdown">
+
+                <button class=" dropdown-toggle" type="input" data-toggle="dropdown" aria-expanded="false" id="city">
+                city
+                </button>
+            </div>
         </div>
+        
         <br>
-        <input type="tel" placeholder="Phone Number 1" name="phone_number_1" required>
+        <input type="tel" placeholder="Phone Number 1"id="num1" name="phone_number_1" required>
         <br>
-        <input type="tel" placeholder="Phone Number 2" name="phone_number_2">
+        <input type="tel" placeholder="Phone Number 2" name="phone_number_2" id="num2">
         <br>
-        <button type="submit"> Confirm </button>
+        <button type="submit" id="vd"> Confirm </button>
     </form>
     
-    <!-- body 2 -->
-    @if(isset($cart) && $cart->isNotEmpty())
-        @foreach($cart as $cartItem)
-            <div id="div60">
-                <img src="{{ $cartItem->item->getImageUrl() }}"  id="ph51">
-                <p id="duct">{{ $cartItem->item->name }}</p>
-                <p id="l2">{{ $cartItem->item->price }}LE</p>
-            </div>
-        @endforeach
-    @else
-        <p>No items in the cart.</p>
-    @endif
 
-    <p id="Subtotal">Subtotal</p>
-    <p id="l8">{{ $subTotal }}LE</p>
-    <br>
-    <p id="ship">Shipping</p>
-    <p id="l7">{{ $shipping }}LE</p>
-    <br>
-    <p id="total">Total</p>
-    <p id="l1">{{ $total }}LE</p>
-    <del id="l0">{{ $subTotal }}LE</del>
+    <!-- body 2 -->
+   <!-- details.blade.php -->
+<div>
+    <div id="div60">
+@if(isset($cart) && $cart->isNotEmpty())
+@foreach($cart as $cartItem)
+        <img src="{{ $cartItem->item->getImageUrl() }}"  id="ph51">
+        <p id="duct">{{ $cartItem->item->name }}</p>
+        <p id="l2">{{ $cartItem->item->price }}LE</p>
+@endforeach
+@else
+<p>No items in the cart.</p>
+@endif
+<p id="Subtotal">Subtotal</p>
+<p id="l8">{{ $subTotal }}LE</p>
+<br>
+<p id="ship">Shipping</p>
+<p id="l7">{{ $shipping }}LE</p>
+<br>
+<p id="total">Total</p>
+<p id="l1">{{ $total }}LE</p>
+<del id="l0">{{ $subTotal }}LE</del>
+</div>
+</div>
 @endsection

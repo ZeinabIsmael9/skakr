@@ -118,7 +118,7 @@
             <h1 id="make" class="font-weight-bold">let's make your <span style="display: block;"></span> clothing style </h1>
             <div id="div18">
                 <div id="div19">
-                    <a id="go" href="{{ route('design-your-own') }}">Let's Go</a>
+                    <a id="go" href="{{ route('create-your-piece') }}">Let's Go</a>
                     <div id="div20">
                         <div id="div21">
                             <img src="{{ asset('assets/IMG/Polygon 4.png') }}" id="ph18">
@@ -150,7 +150,7 @@
                                 <h4 id="le">{{ round($product->firstItem->price) }}LE</h4>
                                 <a href="{{ route('item-detail', $product->id) }}" id="add">Add To Bag</a>
                             </div>
-                            <img src="{{ asset($product->firstItem->media->first()->getUrl()) }}" id="ph21">
+                            <img src="{{ asset($product->firstItem->media->first()->getUrl()) }}" id="ph21"style="z-index" >
                         </div>
                         @endforeach
                     </div>

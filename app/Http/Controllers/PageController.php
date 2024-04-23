@@ -93,13 +93,23 @@ class PageController extends Controller
         //return $categories;
         return view('categories', compact('products', 'categories'));
     }
+
     public function showForm()
     {
-        return view('client-data');
+        $userId = auth()->id(); 
+        $cart = Cart::where('user_id', $userId)->with('item.product', 'item.color', 'item.size')->get();
+        $subTotal = $cart->sum(function ($item) {
+            return $item->item->price * $item->quantity;
+        });
+        $shipping = 70;
+        $discount = 0;
+        $total = $subTotal + $shipping - $discount;
+    
+        return view('client-data', compact('cart', 'subTotal', 'shipping', 'discount', 'total'));
     }
-    public function clientdata(Request $request ,$orderId)
+  
+public function clientData(Request $request)
 {
-    // استلام البيانات من الطلب
     $fullName = $request->input('full_name');
     $country = $request->input('country');
     $address = $request->input('address');
@@ -108,7 +118,6 @@ class PageController extends Controller
     $phoneNumber1 = $request->input('phone_number_1');
     $phoneNumber2 = $request->input('phone_number_2');
 
-    // إنشاء سجل عميل جديد
     $client = Client::create([
         'full_name' => $fullName,
         'country' => $country,
@@ -119,38 +128,10 @@ class PageController extends Controller
         'phone_number_2' => $phoneNumber2,
     ]);
 
-    $userId = optional($request->user())->id; // يجب التحقق من توفر المستخدم المسجل
-    $cart = Cart::where('user_id', $userId)->with('item.product', 'item.color', 'item.size')->get();
-
-    $subTotal = $cart->sum(function ($item) {
-        return $item->item->price * $item->quantity;
-    });
-
-    $shipping = 70;
-    $discount = 0;
-    $total = $subTotal + $shipping - $discount;
-
-    // إعادة عرض الصفحة مع البيانات
-    return view('received', compact('cart', 'subTotal', 'shipping', 'discount', 'total'));
+    $orderId = $client->id;
+    return redirect()->route('received', ['orderId' => $orderId]);
 }
 
-public function received(Request $request ,$orderId)
-{
-    // الحصول على قيمة المعرف من الطلب
-    $orderId = $request->route()->parameters()['orderId'];
-
-    // افتراضيًا، يجب أن تمرر هذه البيانات من دالة أخرى أو من جدول قاعدة البيانات
-    $order = Order::findOrFail($orderId); // استبدل $orderId بمعرف الطلب الفعلي
-    $date = date('F j, Y'); // تاريخ اليوم
-    $total = $order->total; // إجمالي الطلب
-    $paymentMethod = "Cash On Delivery"; // طريقة الدفع
-    $product = $order->product; // المنتج المرتبط بالطلب
-
-    return view('received', compact('date', 'total', 'paymentMethod', 'product', 'orderId'));
-} 
-
-
-    
     
     
     public function help()
@@ -181,33 +162,19 @@ public function received(Request $request ,$orderId)
     {
         return view('privacy');
     }
-//     public function received($request,$orderId)
-// {
-//     // تعريف $orderId
-//     $orderId = $request->order()->id; // استبدل 123 بمعرف الطلب الفعلي
-
-//     // افتراضيًا، يجب أن تمرر هذه البيانات من دالة أخرى أو من جدول قاعدة البيانات
-//     $order = Order::findOrFail($orderId); // استبدل $orderId بمعرف الطلب الفعلي
-//     $date = date('F j, Y'); // تاريخ اليوم
-//     $total = $order->total; // إجمالي الطلب
-//     $paymentMethod = "Cash On Delivery"; // طريقة الدفع
-//     $product = $order->product; // المنتج المرتبط بالطلب
-
-//     return view('received', compact('date', 'total', 'paymentMethod', 'product', 'orderId'));
-// }
-
-    // public function received($orderId) // إضافة وسيط لتمرير معرف الطلب
-    // {
-    //     // افتراضيًا، يجب أن تمرر هذه البيانات من دالة أخرى أو من جدول قاعدة البيانات
-    //     $order = Order::findOrFail($orderId); // استبدل $orderId بمعرف الطلب الفعلي
-    //     $date = date('F j, Y'); // تاريخ اليوم
-    //     $total = $order->total; // إجمالي الطلب
-    //     $paymentMethod = "Cash On Delivery"; // طريقة الدفع
-    //     $product = $order->product; // المنتج المرتبط بالطلب
     
-    //     return view('received', compact('date', 'total', 'paymentMethod', 'product'));
-    // }
-    
+    public function received($orderId)
+    {
+        $order = Order::findOrFail($orderId); 
+        $order_id = $order->get_id();
+        $date = date('F j, Y');
+        $total = $order->total;
+        $paymentMethod = "Cash On Delivery";
+        $product = $order->product;
+        //dd($total);
+
+        return view('received',compact( 'date','total','paymentMethod','product'));
+    }
     
 
     public function shop()

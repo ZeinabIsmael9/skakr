@@ -70,20 +70,20 @@ Route::get('/shopping-cart', [PageController::class, 'shoppingcart'])->name('sho
 Route::get('/categories/{categoryId}', [PageController::class, 'categories'])->name('categories');
 Route::get('/client-data/{orderId}', [PageController::class, 'clientdata'])->name('client-data');
 Route::get('/received/{orderId}', [PageController::class, 'received'])->name('received');
+
 Route::get('/payment-details', [PageController::class, 'paymentdetail'])->name('payment-details');
 Route::get('/trending', [PageController::class, 'trending'])->name('trending');
 Route::get('/shop', [PageController::class, 'shop'])->name('shop');
-Route::get('/designyourown', [PageController::class, 'shop'])->name('design-your-own');
 // Create Your Piece
-Route::get('/create-your-piece', [PageController::class, 'createYourPiece2'])->name('create-your-piece');
-//Route::get('/create-your-piece2', [PageController::class, 'createYourPiece2'])->name('create-your-piece2');
+Route::get('/create-your-piece', [PageController::class, 'createYourPiece'])->name('create-your-piece');
+Route::get('/create-your-piece2', [PageController::class, 'createYourPiece2'])->name('create-your-piece2');
 
 Route::post('/item-detail/{itemId}/save-review', [PageController::class, 'saveReview'])->name('item-detail.save-review');
 Route::post('/contact', [PageController::class, 'contact'])->name('contact.post');
 // Route::post('/client-data', [PageController::class, 'clientdata'])->name('client-data');
 
-Route::get('/client-data', [PageController::class, 'showForm'])->name('client-data');
-Route::post('/client-data', [PageController::class, 'clientdata']);
+Route::get('/client-data', [PageController::class, 'showForm'])->name('client-data.show');
+Route::post('/client-data', [PageController::class, 'clientData'])->name('client-data.store');
 
 Route::get('/add-item-to-cart/{itemId}', [\App\Http\Controllers\CartController::class, 'store'])->name('add-item-to-cart');
 Route::get('/subtract-item-from-cart/{itemId}', [\App\Http\Controllers\CartController::class, 'subtract'])->name('subtract-item-from-cart');
