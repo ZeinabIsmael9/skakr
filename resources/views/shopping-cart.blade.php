@@ -48,7 +48,7 @@
 
                 <form method="POST" action="{{ route('order') }}">
                     @csrf
-                    <button type="submit" id="login"> <a href="client-data">Order</a></button>
+                    <button type="submit" id="login"> <a>Order</a></button>
                 </form>
 
             </div>

@@ -15,13 +15,27 @@
     </div>
 
     <div id="div4">
-        Received
         <p id="mar">{{ $date }}</p>    
         <h3 id="l3" class="font-weight-bold">{{ $total }}LE</h3>    
         <p id="cash">{{ $paymentMethod }}</p> 
-        <p>Product: {{ $product->name }}</p> 
-        <p>Price: {{ $product->price }}LE</p> 
     </div>
+    
+    <h3 id="order">Order Details</h3>
+    
+    <div id="div5">
+        
+        @foreach($products as $product)
+        <div id="div6">
+            <p id="pro">{{ $product->item->product->name }} </p>
+            <p id="x2">x {{$product->quantity}} </p>
+        </div>
+        <h3 id="le1">{{ $product->item->price }} LE</h3>
+        @endforeach 
+
+
+
+    </div>
+
 </div>
 
 @endsection

@@ -48,6 +48,7 @@
                         <input type="hidden" name="total" value="{{ $total }}">
                         <input type="hidden" name="shipping" value="{{ $shipping }}">
                         <input type="hidden" name="sub_total" value="{{ $subTotal }}">
+                        <input type="hidden" name="color" id="selectedColor">
 
 
                 @else
@@ -200,11 +201,12 @@
                 <h6 id="color">Color</h6>
             </div>
 
-            <div id="div14">
-
-                <img src="{{ asset('assets/IMG/لون 1.png')}}" id="lon1">
-                <img src="{{ asset('assets/IMG/لون 2.png')}}" id="lon1">
-                <img src="{{ asset('assets/IMG/لون 3.png')}}" id="lon1">
+            <div id="div14" >
+                <div class="row p-3" style="gap: 5px;">
+                    @foreach($colors as $color)
+                    <div class="colorPick" data-value="{{$color->id}}" style="background-color: {{$color->hex}}; width:25px;height:25px;border-radius:50px;cursor: pointer;margin-left: 20px;"></div>
+                    @endforeach
+                </div>
 
             </div>
 
@@ -221,6 +223,22 @@
 
 @endsection
 @push('scripts')
+<script>
+    let colors = document.querySelectorAll('.colorPick')
+    let selectedColor = document.getElementById('selectedColor')
+    colors.forEach(color => {
+        color.addEventListener('click',()=>{
+
+            colors.forEach(function(color) {
+                color.style.border = 'unset'
+            })
+
+            color.style.border = '2px solid black'
+            selectedColor.value = color.dataset.value
+        })
+    });
+</script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Get the form and radio buttons

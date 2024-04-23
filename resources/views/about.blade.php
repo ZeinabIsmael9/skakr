@@ -19,7 +19,7 @@
         <p id="our">Our brand is built on the foundation of innovation, craftsmanship, <span style="display: block;"></span> and self-expression. <span style="display: block;"></span> We understand that each individual has a distinct style and <span style="display: block;"></span> personality</p>
         <p id="cater">Skakr is here to cater to your individual taste and <span style="display: block;"></span> preferences.</p>
         
-        <a href="../HTML/Design Your Own 1.html">
+        <a href="{{route('create-your-piece')}}">
 
             <button id="vd">TRY IT</button>
 
@@ -27,5 +27,5 @@
         <p id="power">With Skakr, the power to design your <span style="display: block;"></span> own item rests in your hands</p>
         <img src="{{ asset('assets/IMG/t (5).png')}}" id="ph6">
         <img src="{{ asset('assets/IMG/t (4).png')}}" id="ph7">
-        <p id="world"> <a href="../HTML/Sign Up.html" id="np">Join Us</a> in the world of Skakr, where you can turn your fashion dreams into reality. <span style="display: block;"></span> Experience the joy of designing your own garments and be part of a movement that <span style="display: block;"></span> celebrates uniqueness. <span style="display: block;"></span> We invite you to <a href="../HTML/New Collection.html" id="np"> explore our collection </a> , unleash your creativity, and express <span style="display: block;"></span> yourself through fashion like never before.</p>
+        <p id="world"> <a href="{{route('register')}}" id="np">Join Us</a> in the world of Skakr, where you can turn your fashion dreams into reality. <span style="display: block;"></span> Experience the joy of designing your own garments and be part of a movement that <span style="display: block;"></span> celebrates uniqueness. <span style="display: block;"></span> We invite you to <a href="{{route('shop')}}" id="np"> explore our collection </a> , unleash your creativity, and express <span style="display: block;"></span> yourself through fashion like never before.</p>
 @endsection

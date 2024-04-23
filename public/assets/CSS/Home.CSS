@@ -500,6 +500,7 @@
     background-color: #FFE3E3 ;
     width: 1519px;
     height: 740px;
+    
 }
 
 
@@ -529,10 +530,14 @@
 #div23 h4,
 #div23 a {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 30px;
+    left: 30px;
     color: #fff;
+
 }
+
+
+
 
 #add {
     background-color: #fff;
@@ -547,7 +552,8 @@
     height: 260px;
     width: 200px;
     margin: -656px 0 0 26px;
-
+    position:relative;
+    z-index: 1;
 }
 
 

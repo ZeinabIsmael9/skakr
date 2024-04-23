@@ -18,12 +18,6 @@ class Order extends Model
     {
         return $this->hasMany(OrderDetail::class);
     }
-
-
-    public function items()
-    {
-        return $this->belongsToMany(Item::class, 'order_details');
-    }
     
     public function product()
     {

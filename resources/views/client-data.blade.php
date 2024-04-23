@@ -39,7 +39,6 @@
         <button type="submit" id="vd"> Confirm </button>
     </form>
     
-
     <!-- body 2 -->
    <!-- details.blade.php -->
 <div>

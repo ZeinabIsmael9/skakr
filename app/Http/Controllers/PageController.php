@@ -11,7 +11,10 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Cart;
 use App\Models\Client;
+use App\Models\Color;
 use App\Models\Order;
+use App\Models\User;
+
 class PageController extends Controller
 {
     public function createYourPiece()
@@ -52,9 +55,9 @@ class PageController extends Controller
         $discount = 0;
         $total = $subTotal + $shipping - $discount;
 
+        $colors = Color::all();
 
-//        $subTotal = 300;
-        return view('create-your-piece2', compact('designs', 'selectedDesign', 'designKey', 'materialKey', 'sizekey', 'subTotal', 'shipping', 'discount', 'total'));
+        return view('create-your-piece2', compact('designs', 'colors', 'selectedDesign', 'designKey', 'materialKey', 'sizekey', 'subTotal', 'shipping', 'discount', 'total'));
     }
     
     public function index()
@@ -110,6 +113,12 @@ class PageController extends Controller
   
 public function clientData(Request $request)
 {
+    $userId = auth()->user()->id;
+    $cart = Cart::where('user_id', $userId)->with('item.product', 'item.color', 'item.size')->get();
+
+    // Clear the cart after the order is placed
+    $cart->each->delete();
+
     $fullName = $request->input('full_name');
     $country = $request->input('country');
     $address = $request->input('address');
@@ -128,8 +137,8 @@ public function clientData(Request $request)
         'phone_number_2' => $phoneNumber2,
     ]);
 
-    $orderId = $client->id;
-    return redirect()->route('received', ['orderId' => $orderId]);
+    $order = Order::where('user_id', $userId)->where('is_active',false)->first();
+    return redirect()->route('received', ['orderId' => $order->id]);
 }
 
     
@@ -165,15 +174,15 @@ public function clientData(Request $request)
     
     public function received($orderId)
     {
-        $order = Order::findOrFail($orderId); 
-        $order_id = $order->get_id();
+        $order = Order::find($orderId); 
         $date = date('F j, Y');
         $total = $order->total;
         $paymentMethod = "Cash On Delivery";
-        $product = $order->product;
-        //dd($total);
+        $products = $order->orderDetails;
+        $order->is_active = true;
+        $order->save();
 
-        return view('received',compact( 'date','total','paymentMethod','product'));
+        return view('received',compact( 'date','total','paymentMethod','products'));
     }
     
 

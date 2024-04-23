@@ -150,7 +150,7 @@
                                 <h4 id="le">{{ round($product->firstItem->price) }}LE</h4>
                                 <a href="{{ route('item-detail', $product->id) }}" id="add">Add To Bag</a>
                             </div>
-                            <img src="{{ asset($product->firstItem->media->first()->getUrl()) }}" id="ph21"style="z-index" >
+                            <img src="{{ asset($product->firstItem->media->first()->getUrl()) }}" id="ph21" >
                         </div>
                         @endforeach
                     </div>
