@@ -129,62 +129,66 @@
             </div>
         </div>
 
-<!-- body 5 -->
-
+        <!-- body 5 -->
         <div id="div22">
+            <div id="div1000">
+                <h1 id="arr">New Arrival</h1>
+                <a id="se" href="{{ route('shop') }}">See All</a>
+            </div>
 
-                    <div id="div1000">
-                        <h1 id="arr">New Arrival</h1>
-                        <a id="se" href="{{route('shop')}}">See All</a>
-        </div>        
-            
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="row" id="row1">
-                    <div class="row">
-                        @foreach($randomProducts as $product)
-                        <div class="col-md-3">
-                            <div id="div23">
-                                <p id="pro">{{ $product->name }}</p>
-                                <h4 id="le">{{ round($product->firstItem->price) }}LE</h4>
-                                <a href="{{ route('item-detail', $product->id) }}" id="add">Add To Bag</a>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    @foreach($newArrivals->chunk(4) as $chunk)
+                        <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                            <div class="row" id="row1">
+                                @foreach($chunk as $product)
+                                    <div class="col-md-3">
+                                        <div id="div23">
+                                            <p id="pro">{{ $product->name }}</p>
+                                            <h4 id="le">{{ $product->firstItem->price }}LE</h4>
+                                            <a class="btn" href="{{ route('add-item-to-cart', $product->id) }}" id="add">Add To Bag</a>
+                                        </div>
+                                        <img src="{{ asset($product->firstItem->getImageUrl()) }}" id="ph21">
+                                    </div>
+                                @endforeach
                             </div>
-                            <img src="{{ asset($product->firstItem->media->first()->getUrl()) }}" id="ph21" >
                         </div>
-                        @endforeach
-                    </div>
-                    
-                    </div>
-
-                    
-<!-- body 6 -->
-        <!-- Display Categories -->
-<div id="div700">
-    <h4 id="categories">Categories</h4>
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="row" id="row2">
-                    @foreach($categories as $category)
-                    <div class="col-md-3">
-                        <div id="div24">
-                            <a href="{{ route('categories', $category->id) }}" id="category-link">
-                                <p id="ho">{{ $category->name }}</p>
-                            </a>
-                        </div>
-                        <a href="{{ route('categories', $category->id) }}">
-                            <img src="{{ $category->image }}" id="ph22">
-                        </a>
-                    </div>
                     @endforeach
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-                            
-        
-        
-        @endsection
+
+        <!-- body 6 -->
+
+
+
+                      <div id="div700">
+                          <h4 id="categories"> Categories </h4>
+                          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                              <div class="carousel-inner">
+                                  @foreach($categories->chunk(4) as $chunk)
+                                      <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                          <div class="row" id="row2">
+                                              @foreach($chunk as $category)
+                                                  <a href="{{ route('categories', $category->id) }}">
+                                                      <div class="col-md-3">
+                                                            <img src="{{ asset($category->firstItemInFirstProduct->getImageUrl()) }}" id="ph22">
+                                                          <div id="div24">
+                                                              <p id="ho">{{ $category->name }}</p>
+                                                              <img src="../IMG/icon.png" id="icon1">
+                                                          </div>
+                                                      </div>
+
+                                                  </a>
+                                              @endforeach
+                                          </div>
+                                      </div>
+                                  @endforeach
+                              </div>
+                          </div>
+                      </div>
+
+
+
+    @endsection

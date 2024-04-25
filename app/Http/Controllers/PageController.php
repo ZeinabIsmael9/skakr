@@ -59,12 +59,17 @@ class PageController extends Controller
 
         return view('create-your-piece2', compact('designs', 'colors', 'selectedDesign', 'designKey', 'materialKey', 'sizekey', 'subTotal', 'shipping', 'discount', 'total'));
     }
-    
+
     public function index()
     {
-        $randomProducts = Product::inRandomOrder()->limit(4)->get();
-        $categories = Category::inRandomOrder()->limit(3)->get();
-        return view('welcome', compact('randomProducts', 'categories'));
+//        $category = Category::find(1); // Replace 1 with any valid category id
+//        $firstItemInFirstProduct = $category->firstItemInFirstProduct;
+//        return $firstItemInFirstProduct;
+//        return Category::with('firstItemInFirstProduct')->get();
+        $randomProducts = Product::has('items')->with('firstItem.media')->inRandomOrder()->get();
+        $newArrivals = Product::has('items')->with('firstItem.media')->inRandomOrder()->get();
+        $categories = Category::has('products.items')->with('firstItemInFirstProduct')->inRandomOrder()->get();
+        return view('welcome', compact('randomProducts','newArrivals', 'categories'));
     }
 
 
@@ -99,7 +104,7 @@ class PageController extends Controller
 
     public function showForm()
     {
-        $userId = auth()->id(); 
+        $userId = auth()->id();
         $cart = Cart::where('user_id', $userId)->with('item.product', 'item.color', 'item.size')->get();
         $subTotal = $cart->sum(function ($item) {
             return $item->item->price * $item->quantity;
@@ -107,10 +112,10 @@ class PageController extends Controller
         $shipping = 70;
         $discount = 0;
         $total = $subTotal + $shipping - $discount;
-    
+
         return view('client-data', compact('cart', 'subTotal', 'shipping', 'discount', 'total'));
     }
-  
+
 public function clientData(Request $request)
 {
     $userId = auth()->user()->id;
@@ -141,8 +146,8 @@ public function clientData(Request $request)
     return redirect()->route('received', ['orderId' => $order->id]);
 }
 
-    
-    
+
+
     public function help()
     {
         return view('help');
@@ -171,10 +176,10 @@ public function clientData(Request $request)
     {
         return view('privacy');
     }
-    
+
     public function received($orderId)
     {
-        $order = Order::find($orderId); 
+        $order = Order::find($orderId);
         $date = date('F j, Y');
         $total = $order->total;
         $paymentMethod = "Cash On Delivery";
@@ -184,7 +189,7 @@ public function clientData(Request $request)
 
         return view('received',compact( 'date','total','paymentMethod','products'));
     }
-    
+
 
     public function shop()
     {

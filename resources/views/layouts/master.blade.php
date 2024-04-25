@@ -19,7 +19,7 @@
         </style>
     </head>
 
-<body>
+<body class="home">
 
     <!-- nav -->
     <section class="nav__bar">
