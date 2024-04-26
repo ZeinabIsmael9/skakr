@@ -66,7 +66,7 @@ Route::get('/help', [PageController::class, 'help'])->name('help');
 Route::get('/user-terms', [PageController::class, 'userterms'])->name('user-terms');
 Route::get('/item-detail/{itemId}', [PageController::class, 'itemdetail'])->name('item-detail');
 Route::get('/cart', [PageController::class, 'cart'])->name('cart');
-Route::get('/shopping-cart', [PageController::class, 'shoppingcart'])->name('shopping-cart');
+Route::get('/shopping-cart', [PageController::class, 'shoppingcart'])->name('shopping-cart')->middleware('auth');
 Route::get('/categories/{categoryId}', [PageController::class, 'categories'])->name('categories');
 Route::get('/client-data/{orderId}', [PageController::class, 'clientdata'])->name('client-data');
 Route::get('/received/{orderId}', [PageController::class, 'received'])->name('received');
@@ -76,21 +76,21 @@ Route::get('/trending', [PageController::class, 'trending'])->name('trending');
 Route::get('/shop', [PageController::class, 'shop'])->name('shop');
 // Create Your Piece
 Route::get('/create-your-piece', [PageController::class, 'createYourPiece'])->name('create-your-piece');
-Route::get('/create-your-piece2', [PageController::class, 'createYourPiece2'])->name('create-your-piece2');
+Route::get('/create-your-piece2', [PageController::class, 'createYourPiece2'])->name('create-your-piece2')->middleware('auth');
 
 Route::post('/item-detail/{itemId}/save-review', [PageController::class, 'saveReview'])->name('item-detail.save-review');
 Route::post('/contact', [PageController::class, 'contact'])->name('contact.post');
 // Route::post('/client-data', [PageController::class, 'clientdata'])->name('client-data');
 
-Route::get('/client-data', [PageController::class, 'showForm'])->name('client-data.show');
-Route::post('/client-data', [PageController::class, 'clientData'])->name('client-data.store');
+Route::get('/client-data/{orderId}', [PageController::class, 'showForm'])->name('client-data.show')->middleware('auth');
+Route::post('/client-data/{orderId}', [PageController::class, 'clientData'])->name('client-data.store')->middleware('auth');
 
-Route::get('/add-item-to-cart/{itemId}', [\App\Http\Controllers\CartController::class, 'store'])->name('add-item-to-cart');
-Route::get('/subtract-item-from-cart/{itemId}', [\App\Http\Controllers\CartController::class, 'subtract'])->name('subtract-item-from-cart');
+Route::get('/add-item-to-cart/{itemId}', [\App\Http\Controllers\CartController::class, 'store'])->name('add-item-to-cart')->middleware('auth');
+Route::get('/subtract-item-from-cart/{itemId}', [\App\Http\Controllers\CartController::class, 'subtract'])->name('subtract-item-from-cart')->middleware('auth');
 
-Route::post('/order', [\App\Http\Controllers\OrderController::class, 'store'])->name('order');
-Route::post('/order-cutom', [\App\Http\Controllers\OrderController::class, 'storeCutom'])->name('order-cutom');
+Route::post('/order', [\App\Http\Controllers\OrderController::class, 'store'])->name('order')->middleware('auth');
+Route::post('/order-cutom', [\App\Http\Controllers\OrderController::class, 'storeCutom'])->name('order-cutom')->middleware('auth');
 require __DIR__.'/auth.php';
-require __DIR__ . '/dashboard/auth.php';
+//require __DIR__ . '/dashboard/auth.php';
 require __DIR__ . '/dashboard/web.php';
 ?>

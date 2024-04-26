@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Item;
 use App\Models\Product;
+use App\Models\ShippingAddress;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 use Illuminate\Support\Facades\Redirect;
@@ -102,9 +103,12 @@ class PageController extends Controller
         return view('categories', compact('products', 'categories'));
     }
 
-    public function showForm()
+    public function showForm($orderId)
     {
-        $userId = auth()->id();
+        $order = Order::with('orderDetails.item')->find($orderId);
+        return  view('client-data', compact('order'));
+
+        $userId = auth()->id()??User::first()->id;
         $cart = Cart::where('user_id', $userId)->with('item.product', 'item.color', 'item.size')->get();
         $subTotal = $cart->sum(function ($item) {
             return $item->item->price * $item->quantity;
@@ -116,13 +120,14 @@ class PageController extends Controller
         return view('client-data', compact('cart', 'subTotal', 'shipping', 'discount', 'total'));
     }
 
-public function clientData(Request $request)
+//public function clientData(Request $request)
+public function clientData(Request $request, $orderId)
 {
-    $userId = auth()->user()->id;
-    $cart = Cart::where('user_id', $userId)->with('item.product', 'item.color', 'item.size')->get();
-
-    // Clear the cart after the order is placed
-    $cart->each->delete();
+//    $userId = auth()->user()->id;
+//    $cart = Cart::where('user_id', $userId)->with('item.product', 'item.color', 'item.size')->get();
+//
+//    // Clear the cart after the order is placed
+//    $cart->each->delete();
 
     $fullName = $request->input('full_name');
     $country = $request->input('country');
@@ -131,8 +136,9 @@ public function clientData(Request $request)
     $city = $request->input('city');
     $phoneNumber1 = $request->input('phone_number_1');
     $phoneNumber2 = $request->input('phone_number_2');
+//    $orderId = $request->input('order_id');
 
-    $client = Client::create([
+    $client = ShippingAddress::create([
         'full_name' => $fullName,
         'country' => $country,
         'address' => $address,
@@ -140,10 +146,11 @@ public function clientData(Request $request)
         'city' => $city,
         'phone_number_1' => $phoneNumber1,
         'phone_number_2' => $phoneNumber2,
+        "order_id" => $orderId,
     ]);
 
-    $order = Order::where('user_id', $userId)->where('is_active',false)->first();
-    return redirect()->route('received', ['orderId' => $order->id]);
+//    $order = Order::where('user_id', $userId)->where('is_active',false)->first();
+    return redirect()->route('received', ['orderId' => $orderId]);
 }
 
 
@@ -202,7 +209,7 @@ public function clientData(Request $request)
     public function shoppingcart()
     {
 //        $userId = auth()->id();
-        $userId = 1;
+        $userId =  auth()->id()??User::first()->id;
         $cart = Cart::where('user_id', $userId)->with('item.product', 'item.color', 'item.size')->get();
         $subTotal = $cart->sum(function ($item) {
             return $item->item->price * $item->quantity;

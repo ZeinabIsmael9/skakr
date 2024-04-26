@@ -39,7 +39,7 @@
 
 
                 @if($selectedDesign && $materialKey && $sizekey)
-                    <form method="POST" action="{{ route('order-cutom') }}">
+                <form method="POST" action="{{ route('order-cutom') }}" enctype="multipart/form-data">
                         @csrf
                         <button type="submit" id="vd">Order</button>
                         <input type="hidden" name="design" value="{{ $designKey }}">
@@ -50,9 +50,8 @@
                         <input type="hidden" name="sub_total" value="{{ $subTotal }}">
                         <input type="hidden" name="color" id="selectedColor">
 
-
                 @else
-                    <button id="vd" onclick="showAlert()">Order</button>
+                <button id="vd" onclick="showAlert()">Order</button>
                 @endif
 
             <br>
@@ -68,8 +67,17 @@
 
                 <img src="{{ asset('assets/IMG/rrrrr.png')}}" id="ph4">
                 <h1 id="down" class="font-weight-bold">Download Your Design</h1>
-
+                <div class="input-group mb-3">
+{{--                    <div class="input-group-prepend">--}}
+{{--                        <span class="input-group-text" id="inputGroupFileAddon01">Here</span>--}}
+{{--                    </div>--}}
+                    <div class="custom-file">
+                        <input name="image"  type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose image</label>
+                    </div>
+                </div>
             </div>
+
 
 
             <div id="div4">
@@ -292,7 +300,9 @@
         }
     </script>
     <script>
-        function showAlert() {
+        function showAlert(e) {
+            // e.preventDefault();
+
             alert("plase select design, material and size");
         }
     </script>

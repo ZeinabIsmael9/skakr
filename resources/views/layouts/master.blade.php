@@ -62,8 +62,18 @@
             {{-- icons --}}
             <div class="icons__container">
                 <img src="{{ asset('assets/IMG/Property 1=Vector.png') }}" id="ph600">
-                <a id="log" href="{{ route('login') }}"> Login </a>
-                <a id="log" href="{{ route('register') }}"> Register </a>
+                @if(Auth::check())
+                    <a href="{{route('shopping-cart')}}"> <img src="{{ asset('assets/IMG/Group 46.png') }}" id="ph46"> </a>
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button id="log" href="{{ route('logout') }}"> logout </button>
+                    </form>
+                @else
+                    <a id="log" href="{{ route('login') }}"> Login </a>
+                    <a id="log" href="{{ route('register') }}"> Register </a>
+                @endif
+
+
             </div>
         </nav>
     </section>

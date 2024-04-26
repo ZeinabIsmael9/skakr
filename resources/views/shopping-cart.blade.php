@@ -45,11 +45,14 @@
                     </div>
 
                 </div>
-
+@if($cart->isNotEmpty())
                 <form method="POST" action="{{ route('order') }}">
                     @csrf
                     <button type="submit" id="login"> <a>Order</a></button>
                 </form>
+@else
+    @endif
+
 
             </div>
 

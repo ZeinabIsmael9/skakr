@@ -176,7 +176,7 @@
                                                             <img src="{{ asset($category->firstItemInFirstProduct->getImageUrl()) }}" id="ph22">
                                                           <div id="div24">
                                                               <p id="ho">{{ $category->name }}</p>
-                                                              <img src="../IMG/icon.png" id="icon1">
+                                                              <img src="{{asset('assets/IMG/icon.png')}}" id="icon1">
                                                           </div>
                                                       </div>
 

@@ -31,7 +31,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        $userId = auth()->user()->id;
+        $userId = auth()->user()->id??User::first()->id;
         $cart = Cart::where('user_id', $userId)->with('item.product', 'item.color', 'item.size')->get();
         $subTotal = $cart->sum(function ($item) {
             return $item->item->price * $item->quantity;
@@ -57,24 +57,27 @@ class OrderController extends Controller
             $orderDetail->save();
         }
 
+        $cart->each->delete();
 
-        $userId = auth()->id(); 
-        $cart = Cart::where('user_id', $userId)->with('item.product', 'item.color', 'item.size')->get();
-        $subTotal = $cart->sum(function ($item) {
-            return $item->item->price * $item->quantity;
-        });
-        $shipping = 70;
-        $discount = 0;
-        $total = $subTotal + $shipping - $discount;
+//        $userId = auth()->id();
+//        $cart = Cart::where('user_id', $userId)->with('item.product', 'item.color', 'item.size')->get();
+//        $subTotal = $cart->sum(function ($item) {
+//            return $item->item->price * $item->quantity;
+//        });
+//        $shipping = 70;
+//        $discount = 0;
+//        $total = $subTotal + $shipping - $discount;
 
-    return redirect()->route('client-data.show', compact('cart', 'subTotal', 'shipping', 'discount', 'total'))->with('success', 'Order has been placed successfully.');
+        return redirect()->route('client-data.show', ['orderId' => $order->id]);
+//    return redirect()->route('client-data.show', compact('cart', 'subTotal', 'shipping', 'discount', 'total'))->with('success', 'Order has been placed successfully.');
 
     }
 
     public function storeCutom(request $request)
     {
-        dd($request);
-        $userId = auth()->user()->id;
+//return     $image = $request->file('image');
+//        dd($request);
+        $userId = auth()->user()->id??User::first()->id;
         $subTotal = $request->sub_total;
         $shipping = $request->shipping;
         $discount = $request->discount;
@@ -94,8 +97,12 @@ class OrderController extends Controller
         $orderDetail->amount = $subTotal;
 //    $orderDetail->design_id = $request->design_id;
         $orderDetail->save();
+        if ($request->hasFile('image')) {
+            $orderDetail->addMediaFromRequest('image')->toMediaCollection('designs');
 
-        return redirect()->route('index')->with('success', 'Order has been placed successfully.');
+            return $orderDetail;
+        }
+            return redirect()->route('index')->with('success', 'Order has been placed successfully.');
 
     }
 
