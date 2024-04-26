@@ -30,11 +30,11 @@ class PageController extends Controller
         $materialKey = request()->material;
         $sizekey = request()->size;
         $designs = [
-            ['value' => 'design1', 'imagePath' => asset('assets/IMG/p (1).png'), 'priceSize1' => '340', 'priceSize2' => '330'],
-            ['value' => 'design2', 'imagePath' => asset('assets/IMG/p (2).png'), 'priceSize1' => '330', 'priceSize2' => '320'],
-            ['value' => 'design3', 'imagePath' => asset('assets/IMG/p (3).png'), 'priceSize1' => '320', 'priceSize2' => '320'],
-            ['value' => 'design4', 'imagePath' => asset('assets/IMG/p (4).png'), 'priceSize1' => '300', 'priceSize2' => '290'],
-            ['value' => 'design5', 'imagePath' => asset('assets/IMG/p (5).png'), 'priceSize1' => '310', 'priceSize2' => '300'],
+            ['value' => 'design1', 'imagePath' => asset('assets/IMG/p (2).png'), 'priceSize1' => '340', 'priceSize2' => '330'],
+            ['value' => 'design2', 'imagePath' => asset('assets/IMG/p (3).png'), 'priceSize1' => '330', 'priceSize2' => '320'],
+            ['value' => 'design3', 'imagePath' => asset('assets/IMG/p (4).png'), 'priceSize1' => '320', 'priceSize2' => '320'],
+            ['value' => 'design4', 'imagePath' => asset('assets/IMG/p (5).png'), 'priceSize1' => '300', 'priceSize2' => '290'],
+            ['value' => 'design5', 'imagePath' => asset('assets/IMG/p (1).png'), 'priceSize1' => '310', 'priceSize2' => '300'],
         ];
         $selectedDesign = null;
         foreach ($designs as $design) {
