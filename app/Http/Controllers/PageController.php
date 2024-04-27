@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Item;
 use App\Models\Product;
+use App\Models\Review;
 use App\Models\ShippingAddress;
 use Illuminate\Http\Request;
 use App\Models\Contact;
@@ -240,12 +241,21 @@ public function clientData(Request $request, $orderId)
     public function saveReview($itemId)
     {
         $item = Item::find($itemId);
-        $item->reviews()->create([
-            'product_id' => $item->product_id,
-            'user_id' => auth()->id()??User::first()->id,
-            'rating' => request('rating'),
-            'comment' => request('comment'),
-        ]);
+        $review = new Review();
+        $review->product_id = $item->product_id;
+        $review->user_id = auth()->id()??User::first()->id;
+        if (request('rating')){
+            $review->rating = request('rating');
+        }
+        $review->comment = request('comment');
+        $review->save();
+//        $item->reviews()->create([
+//            'product_id' => $item->product_id,
+//            'user_id' => auth()->id()??User::first()->id,
+//            'rating' => request('rating'),
+//            'comment' => request('comment'),
+//        ]);
+
 
         return back();
     }

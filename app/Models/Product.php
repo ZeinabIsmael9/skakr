@@ -35,6 +35,8 @@ class Product extends Model
     {
         return $this->hasOne(Item::class);
     }
+
+
 //    public function firstItemImage()
 //    {
 //
