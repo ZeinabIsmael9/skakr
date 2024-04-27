@@ -11,5 +11,5 @@ class ShippingAddress extends Model
 
     protected $guarded = [];
 
-    public $timestamps = false;
+//    public $timestamps = false;
 }

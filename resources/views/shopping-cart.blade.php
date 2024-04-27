@@ -75,8 +75,8 @@
                     <img src="{{$cartItem->item->getImageUrl()}}" id="ph12">
 
 
-                    <p id="product">Product</p>
-                    <p id="name">Name</p>
+                    <p id="product" style="width: 135px;">{{$cartItem->item->product->name}} </p>
+{{--                    <p id="name">Name</p>--}}
 
                     <h4 id="l0" class="font-weight-bold">{{($cartItem->item->price )}}LE</h4>
 
@@ -94,9 +94,9 @@
 
                     <h4 id="l2" class="font-weight-bold">{{($cartItem->item->price * $cartItem->quantity)}}LE</h4>
 
-                    <div id="div61">
-                        <img src="../IMG/x.png" id="ph52">
-                    </div>
+{{--                    <div id="div61">--}}
+{{--                        <img src="../IMG/x.png" id="ph52">--}}
+{{--                    </div>--}}
 
                 </div>
             @endforeach

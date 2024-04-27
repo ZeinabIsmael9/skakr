@@ -100,9 +100,10 @@ class OrderController extends Controller
         if ($request->hasFile('image')) {
             $orderDetail->addMediaFromRequest('image')->toMediaCollection('designs');
 
-            return $orderDetail;
+//            return $orderDetail;
         }
-            return redirect()->route('index')->with('success', 'Order has been placed successfully.');
+        return redirect()->route('client-data.show', ['orderId' => $order->id]);
+//        return redirect()->route('index')->with('success', 'Order has been placed successfully.');
 
     }
 

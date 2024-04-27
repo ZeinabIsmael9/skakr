@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
@@ -59,7 +60,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/', [PageController::class, 'index'])->name('index');
-Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/privacy', [PageController::class, 'privacy'])->name('privacy');
 Route::get('/help', [PageController::class, 'help'])->name('help');
@@ -79,7 +79,8 @@ Route::get('/create-your-piece', [PageController::class, 'createYourPiece'])->na
 Route::get('/create-your-piece2', [PageController::class, 'createYourPiece2'])->name('create-your-piece2')->middleware('auth');
 
 Route::post('/item-detail/{itemId}/save-review', [PageController::class, 'saveReview'])->name('item-detail.save-review');
-Route::post('/contact', [PageController::class, 'contact'])->name('contact.post');
+Route::get('/contact', [ContactController::class, 'create'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.post');
 // Route::post('/client-data', [PageController::class, 'clientdata'])->name('client-data');
 
 Route::get('/client-data/{orderId}', [PageController::class, 'showForm'])->name('client-data.show')->middleware('auth');
@@ -91,6 +92,6 @@ Route::get('/subtract-item-from-cart/{itemId}', [\App\Http\Controllers\CartContr
 Route::post('/order', [\App\Http\Controllers\OrderController::class, 'store'])->name('order')->middleware('auth');
 Route::post('/order-cutom', [\App\Http\Controllers\OrderController::class, 'storeCutom'])->name('order-cutom')->middleware('auth');
 require __DIR__.'/auth.php';
-//require __DIR__ . '/dashboard/auth.php';
+require __DIR__ . '/dashboard/auth.php';
 require __DIR__ . '/dashboard/web.php';
 ?>

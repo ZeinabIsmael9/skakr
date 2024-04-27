@@ -167,7 +167,7 @@ public function clientData(Request $request, $orderId)
         $item = Item::with('Product')->findOrFail($itemId);
         $colorsOfOtherItems = $item->product->items()->where('size_id', $item->size_id)->with('color')->get();
         $otherSizesOfSameColor = Item::where('product_id', $item->product_id)->where('color_id', $item->color_id)->with('size')->get();
-        $randomProducts = Product::with('firstItem.media', 'colors')->where('id', '!=', $item->product_id)->inRandomOrder()->take(4)->get();
+        $randomProducts = Product::has('items')->with('firstItem.media', 'colors')->where('id', '!=', $item->product_id)->inRandomOrder()->take(4)->get();
 
 
         // return $item->getImageUrl();
@@ -190,11 +190,11 @@ public function clientData(Request $request, $orderId)
         $date = date('F j, Y');
         $total = $order->total;
         $paymentMethod = "Cash On Delivery";
-        $products = $order->orderDetails;
+        $orderDetails = $order->orderDetails;
         $order->is_active = true;
         $order->save();
 
-        return view('received',compact( 'date','total','paymentMethod','products'));
+        return view('received',compact( 'date','total','paymentMethod','order'));
     }
 
 

@@ -41,7 +41,7 @@
           <button class="minus_plus1 btn" id="te">-</button>
 
 
-            
+
 
         <p id="l0">600LE</p>
         <p id="l2">600LE</p>
@@ -61,8 +61,8 @@
         <a href=" {{ route('shopping-cart') }}">
           <button id="vd">View Card</button>
         </a>
-        
-    
+
+
     </div>
 
 

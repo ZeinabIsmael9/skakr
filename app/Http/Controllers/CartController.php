@@ -30,7 +30,7 @@ class CartController extends Controller
     public function store(Request $request,$itemId)
     {
 //        return $request->all();
-        $user_id = User::first()->id;
+        $user_id = $request->user()->id??User::first()->id;
 //        $user_id = $request->user()->id;
        $quantity = $request->quantity??1;
         if ($cart = Cart::where('item_id', $itemId)->where('user_id', $user_id)->first()) {
@@ -50,7 +50,7 @@ class CartController extends Controller
     }
 
     public  function subtract(Request $request,$itemId){
-        $user_id = User::first()->id;
+        $user_id = $request->user()->id??User::first()->id;
         $quantity = $request->quantity??1;
         if ($cart = Cart::where('item_id', $itemId)->where('user_id', $user_id)->first()) {
             $cart->quantity = $cart->quantity - $quantity;

@@ -53,9 +53,27 @@
 {{--                {{$order}}--}}
 {{--                @if(isset($cart) && $cart->isNotEmpty())--}}
                     @foreach($order->orderDetails as $orderDetails)
-                        <img src="{{ $orderDetails->item->getImageUrl() }}" id="ph51">
-                        <p id="duct">{{ $orderDetails->item->product->name }}</p>
-                        <p id="l2">{{ $orderDetails->item->price }}LE</p>
+                        @if($orderDetails->item)
+                            <img src="{{ $orderDetails->item->getImageUrl() }}" id="ph51">
+                            <p id="duct">{{ $orderDetails->item->product->name }}</p>
+                        @elseif($orderDetails)
+                            @if($orderDetails->hasMedia('designs'))
+                                <img src="{{ $orderDetails->getFirstMediaUrl('designs') }}" id="ph51">
+{{--                                <p id="duct">download design</p>--}}
+                                <p id="duct">cutom desgin</p>
+                            @elseif($orderDetails->design_id)
+                                <img src="" id="ph51">
+{{--                                <p id="duct">selected design</p>--}}
+                                <p id="duct">cutom desgin</p>
+                            @else
+                                <img src="" id="ph51">
+                                <p id="duct"></p>
+
+                            @endif
+                                <p id="l2">{{ $orderDetails->amount }}LE</p>
+                        @endif
+
+
                     @endforeach
 {{--                @else--}}
 {{--                    <p>No items in the cart.</p>--}}

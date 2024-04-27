@@ -17,7 +17,7 @@
             <br>
             <input type="email" placeholder="Email" id="email" name="email">
             <br>
-            <input type="number" placeholder="Phone Number" id="num" name="num">
+            <input type="text" placeholder="Phone Number" id="num" name="phone_number">
             <br>
         <div id="div2">
             <input type="text" placeholder="How We Can Help!" id="text" name="text">
