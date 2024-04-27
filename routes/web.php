@@ -78,7 +78,7 @@ Route::get('/shop', [PageController::class, 'shop'])->name('shop');
 Route::get('/create-your-piece', [PageController::class, 'createYourPiece'])->name('create-your-piece');
 Route::get('/create-your-piece2', [PageController::class, 'createYourPiece2'])->name('create-your-piece2')->middleware('auth');
 
-Route::post('/item-detail/{itemId}/save-review', [PageController::class, 'saveReview'])->name('item-detail.save-review');
+Route::post('/item-detail/{itemId}/save-review', [PageController::class, 'saveReview'])->name('item-detail.save-review')->middleware('auth');
 Route::get('/contact', [ContactController::class, 'create'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.post');
 // Route::post('/client-data', [PageController::class, 'clientdata'])->name('client-data');

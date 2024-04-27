@@ -237,4 +237,17 @@ public function clientData(Request $request, $orderId)
     }
 
 
+    public function saveReview($itemId)
+    {
+        $item = Item::find($itemId);
+        $item->reviews()->create([
+            'product_id' => $item->product_id,
+            'user_id' => auth()->id()??User::first()->id,
+            'rating' => request('rating'),
+            'comment' => request('comment'),
+        ]);
+
+        return back();
+    }
+
 }

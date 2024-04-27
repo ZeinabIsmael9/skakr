@@ -125,9 +125,9 @@
             @csrf
             <img src="{{ asset('assets/IMG/Group 62.png')}}" id="ph56">
             <br>
-            <label id="revi" class="font-weight-bold">Review</label>
+            <label id="revi" class="font-weight-bold">comment</label>
             <br>
-            <input type="text" id="rev" name="review">
+            <input type="text" id="rev" name="comment">
             <br>
             <div id="div73">
                 <div id="div74">
@@ -143,9 +143,9 @@
             </div>
             <button id="vd" type="submit">Share</button>
         </form>
-        
+
       </div>
-      
+
 
 
 
