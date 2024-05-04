@@ -324,11 +324,13 @@
                     <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
                       <i class="ni ni-mobile-button text-white opacity-10"></i>
                     </div>
+                    @foreach(\App\Models\Category::all() as $category)
+
                     <div class="d-flex flex-column">
-                      <h6 class="mb-1 text-dark text-sm">Devices</h6>
-                      <span class="text-xs">250 in stock, <span class="font-weight-bold">346+ sold</span></span>
-                    </div>
+                      <a class="dropdown-item" href="{{ route('categories', ['categoryId' => $category->id]) }}" id="car">{{ $category->name }}</a>
+                  @endforeach</div>
                   </div>
+{{-- 
                   <div class="d-flex">
                     <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto"><i class="ni ni-bold-right" aria-hidden="true"></i></button>
                   </div>
@@ -379,8 +381,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <footer class="footer pt-3  ">
+      </div> --}}
+      {{-- <footer class="footer pt-3  ">
         <div class="container-fluid">
           <div class="row align-items-center justify-content-lg-between">
             <div class="col-lg-6 mb-lg-0 mb-4">
@@ -413,8 +415,8 @@
         </div>
       </footer>
     </div>
-  </main>
-
+  </main> --}}
+</main>
 
 
 @endsection

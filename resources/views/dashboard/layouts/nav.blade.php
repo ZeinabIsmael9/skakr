@@ -29,6 +29,8 @@
 
                 ['name' => 'Products', 'route' => 'dashboard.products.index','icon' => 'fa-box-open','color' => 'text-success'],
                 ['name' => 'Items', 'route' => 'dashboard.items.index','icon' => 'fa-box-open','color' => 'text-success'],
+                ['name' => 'order', 'route' => 'dashboard.orders.index','icon' => 'fa-box-open','color' => 'text-success'],
+                ['name' => 'category', 'route' => 'dashboard.categories.index','icon' => 'fa-box-open','color' => 'text-success'],
 
 
             ];
@@ -81,7 +83,7 @@
                     class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
                 </div>
-                <span class="nav-link-text ms-1">Sign In</span>
+                <span class="nav-link-text ms-1"><a href="dashboard/login"> Sign In </a></span>
                 {{-- </a> --}}
             </li>
             <li class="nav-item">
@@ -90,7 +92,7 @@
                     class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="ni ni-collection text-info text-sm opacity-10"></i>
                 </div>
-                <span class="nav-link-text ms-1">Sign Up</span>
+                <span class="nav-link-text ms-1"> <a href="dashboard/register">Sign Up</a></span>
                 {{-- </a> --}}
             </li>
         </ul>
@@ -140,7 +142,7 @@
                     <li class="nav-item d-flex align-items-center">
                         <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
                             <i class="fa fa-user me-sm-1"></i>
-                            <span class="d-sm-inline d-none">Sign In</span>
+                            <span class="d-sm-inline d-none" > <a href="dashboard/login">Sign In</a></span>
                         </a>
                     </li>
                     <li class="nav-item d-xl-none ps-3 d-flex align-items-center">

@@ -124,11 +124,6 @@ class PageController extends Controller
 //public function clientData(Request $request)
 public function clientData(Request $request, $orderId)
 {
-//    $userId = auth()->user()->id;
-//    $cart = Cart::where('user_id', $userId)->with('item.product', 'item.color', 'item.size')->get();
-//
-//    // Clear the cart after the order is placed
-//    $cart->each->delete();
 
     $fullName = $request->input('full_name');
     $country = $request->input('country');
@@ -192,7 +187,7 @@ public function clientData(Request $request, $orderId)
         $total = $order->total;
         $paymentMethod = "Cash On Delivery";
         $orderDetails = $order->orderDetails;
-        $order->is_active = true;
+        //$order->is_active = true;
         $order->save();
 
         return view('received',compact( 'date','total','paymentMethod','order'));

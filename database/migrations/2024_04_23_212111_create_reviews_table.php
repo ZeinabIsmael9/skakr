@@ -16,7 +16,7 @@ class CreateReviewsTable extends Migration
             $table->foreignId('product_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->text('comment');
             // $table->string('email');
-            $table->unsignedSmallInteger('rating')->nullable()->default(5);
+            $table->unsignedSmallInteger('rating')->default(5);
             $table->timestamps();
         });
 

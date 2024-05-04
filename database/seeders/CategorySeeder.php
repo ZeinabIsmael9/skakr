@@ -14,25 +14,15 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $categories = [
-//            'Men',
-//            'Women',
-//            'Children',
-//            'Accessories',
-//            'Footwear',
-//            'Formal',
-//            'Casual',
-//            'Sportswear',
-//            'Outerwear',
-//            'Swimwear',
-//            'Sleepwear',
+            'Cardigan',
+            'Skirts',
             'Dress',
-            'T-Shirts',
-//            'Jeans',
+            'Hoodies',
+            'Blouses',
+            'Sets',
+            'Basics',
             'Pants',
-            'Shorts',
-            'Sweaters',
-            'Jackets',
-            'Coats'
+            'Home Wear',
         ];
         foreach ($categories as $categoryName) {
             Category::create([

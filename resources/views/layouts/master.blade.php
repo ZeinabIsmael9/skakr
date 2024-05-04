@@ -138,9 +138,9 @@
 
     <h4 id="social" class="font-weight-bold">Social</h4>
     <div id="div28">
-        <img src="{{ asset('assets/IMG/facebook (2).png') }}" id="ph26">
-        <img src="{{ asset('assets/IMG/whatssapp-big-logo.png') }}" id="ph26">
-        <img src="{{ asset('assets/IMG/instagram (2).png') }}" id="ph26">
+        <a href="https://www.facebook.com/share/fWi4B9mVr3CEMjgb/?mibextid=qi2Omg"><img src="{{ asset('assets/IMG/facebook (2).png') }}" id="ph26"></a>
+        <a href="https://wa.me/201016319138"><img src="{{ asset('assets/IMG/whatssapp-big-logo.png') }}" id="ph26"></a>
+        <a href="https://www.instagram.com/skakr713?igsh=MW56dWV3N3VmNHQxbg=="><img src="{{ asset('assets/IMG/instagram (2).png') }}" id="ph26"></a>
     </div>
 </div>
 @stack('scripts')

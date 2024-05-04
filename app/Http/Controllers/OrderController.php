@@ -7,16 +7,28 @@ use App\Models\Order;
 use App\Models\OrderDetail;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\DataTables\orderDataTable;
+
 
 class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        //
-    }
+    // public function index(OrderDataTable $dataTable)
+    // {
+    //     return $dataTable->render('dashboard.orders.index');
+    // }
+
+    // /**
+    //  * Display the specified resource.
+    //  */
+    // public function show(Order $order)
+    // {
+    //     return view('dashboard.orders.show', compact('order'));
+    // }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -95,25 +107,19 @@ class OrderController extends Controller
         $orderDetail->is_custom = 1;
         $orderDetail->quantity = 1;
         $orderDetail->amount = $subTotal;
-//    $orderDetail->design_id = $request->design_id;
+        //$orderDetail->design_id = $request->design_id;
         $orderDetail->save();
         if ($request->hasFile('image')) {
             $orderDetail->addMediaFromRequest('image')->toMediaCollection('designs');
 
 //            return $orderDetail;
         }
-        return redirect()->route('client-data.show', ['orderId' => $order->id]);
+        return redirect()->route('client-data.show', ['orderId' => $order->id])->with('success', 'Order has been placed successfully.');
 //        return redirect()->route('index')->with('success', 'Order has been placed successfully.');
 
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Order $order)
-    {
-        //
-    }
+    
 
     /**
      * Show the form for editing the specified resource.

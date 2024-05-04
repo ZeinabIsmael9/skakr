@@ -19,10 +19,6 @@
                 @endif
 
             </div>
-            {{--            <input type="radio" name="imageSelector" value="option1" onchange="changeImage(this.value)"> Option 1--}}
-            {{--            <input type="radio" name="imageSelector" value="option2" onchange="changeImage(this.value)"> Option 2--}}
-            {{--            <input type="radio" name="imageSelector" value="option3" onchange="changeImage(this.value)"> Option 3--}}
-
 
             <div id="div3" style=" margin-top: 50px;" >
                 <p id="sub">Subtotal</p>
@@ -83,15 +79,6 @@
             <div id="div4">
                 <h6 id="sha">Dress Shape</h6>
             </div>
-{{--            @php--}}
-{{--                $designs = [--}}
-{{--                    ['value' => 'design1', 'imagePath' => asset('assets/IMG/p (1).png'), 'priceSize1'=>'340LE','priceSize2'=>'330LE'],--}}
-{{--                    ['value' => 'design2', 'imagePath' => asset('assets/IMG/p (2).png'),'priceSize1'=>'330LE','priceSize2'=>'320LE'],--}}
-{{--                    ['value' => 'design3', 'imagePath' => asset('assets/IMG/p (3).png'), 'priceSize1'=>'320LE','priceSize2'=>'320LE'],--}}
-{{--                    ['value' => 'design4', 'imagePath' => asset('assets/IMG/p (4).png'), 'priceSize1'=>'300LE','priceSize2'=>'290LE'],--}}
-{{--                    ['value' => 'design5', 'imagePath' => asset('assets/IMG/p (5).png'), 'priceSize1'=>'310LE','priceSize2'=>'300LE'],--}}
-{{--                ];--}}
-{{--            @endphp--}}
 
             <div id="div6">
                 <div id="design" class="row" style="height: 80%">
@@ -130,32 +117,6 @@
                         </div>
                     @endforeach
                 </div>
-                {{--                <div id="div9">--}}
-                {{--                    <input name="size" type="radio" value="regular">--}}
-                {{--                    <p id="size">Regular Size Price</p>--}}
-                {{--                    @foreach($designs as $item)--}}
-                {{--                        <p id="l1">{{$item['priceSize1']}}LE</p>--}}
-                {{--                    @endforeach--}}
-                {{--                    <p id="l1">340LE</p>--}}
-                {{--                    <p id="l2">330LE</p>--}}
-                {{--                    <p id="l6">330LE</p>--}}
-                {{--                    <p id="l4">300LE</p>--}}
-                {{--                    <p id="l5">310LE</p>--}}
-
-                {{--                </div>--}}
-
-
-                {{--                <div id="div9">--}}
-
-                {{--                    <input name="size" type="radio" value="plus">--}}
-                {{--                    <p id="size">Plus Size Price</p>--}}
-                {{--                    <p id="l7">240LE</p>--}}
-                {{--                    <p id="l8">230LE</p>--}}
-                {{--                    <p id="l9">230LE</p>--}}
-                {{--                    <p id="l10">200LE</p>--}}
-                {{--                    <p id="l11">210LE</p>--}}
-
-                {{--                </div>--}}
 
             </div>
 

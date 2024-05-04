@@ -9,13 +9,6 @@
                     @foreach($product->colors->take(7) as $color)
                         <div id="div49" style="background-color: {{$color->hex}};"></div>
                     @endforeach
-                    {{--                    <div id="div49"></div>--}}
-                    {{--                    <div id="div50"></div>--}}
-                    {{--                    <div id="div51"></div>--}}
-                    {{--                    <div id="div52" style="background-color: #0D600B;"></div>--}}
-                    {{--                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">--}}
-                    {{--                        <circle cx="8" cy="8" r="8"/>--}}
-                    {{--                    </svg>--}}
                 </div>
 
                 <div id="div53">
